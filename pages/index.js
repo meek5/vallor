@@ -11,10 +11,15 @@ import Donor from "../public/assets/images/donor.svg";
 import Freelance from "../public/assets/images/freelance.svg";
 import Shoper from "../public/assets/images/shoper.svg";
 import Entreprise from "../public/assets/images/entreprise.svg";
-import {useMediaQuery} from "react-responsive"
+import Smile from "../public/assets/images/smile.svg";
+import PeerTPeer from "../public/assets/images/peertopeer.svg"
+import Email from "../icons/email.svg"
+import Telephone from "../icons/telephone.svg"
+import Location from "../icons/location.svg"
+import { useMediaQuery } from "react-responsive";
 
 export default function Home() {
-  const isMobileDevice = useMediaQuery({query:"(max-width:767.9px)"})
+  const isMobileDevice = useMediaQuery({ query: "(max-width:767.9px)" });
   return (
     <div className="">
       <Head>
@@ -85,11 +90,26 @@ export default function Home() {
         </div>
         {/* Ecran possibilities (Commercant, developpeur, entreprise, freelance, donateur) */}
         <div className="py-3 section-possibilities">
-          <h1 className="text-center">À chacun sa part</h1>
+          <h1 className="text-center my-5">À chacun sa part</h1>
           <div className="container">
+          <Row className="py-4">
+              <Col className="text-right">
+                <h2>Paiement peer to peer</h2>
+                <hr color="#21ce99" align="right" width="10%" />
+                <p>
+                  Deelpay permet de transférer de l'argent à ses proches sans se prendre la tête. Deelpay facilite aussi le paiement entre particuliers.
+                </p>
+              </Col>
+              <Col className="">
+                <PeerTPeer width={isMobileDevice ? "100%" : "50%"} height="200px" />
+              </Col>
+            </Row>
             <Row className="py-4">
               <Col className="text-right">
-                <Shoper width={isMobileDevice?"100%":"50%"} height="200px" />
+                <Shoper
+                  width={isMobileDevice ? "100%" : "50%"}
+                  height="200px"
+                />
               </Col>
               <Col className="">
                 <h2>Commerçant</h2>
@@ -111,20 +131,22 @@ export default function Home() {
                 </p>
               </Col>
               <Col className="">
-                <Donor width={isMobileDevice?"100%":"50%"} height="200px" />
+                <Donor width={isMobileDevice ? "100%" : "50%"} height="200px" />
               </Col>
             </Row>
             <Row className="py-4">
               <Col className="text-right">
-                <Freelance width={isMobileDevice?"100%":"50%"} height="200px" />
+                <Freelance
+                  width={isMobileDevice ? "100%" : "50%"}
+                  height="200px"
+                />
               </Col>
               <Col>
                 <h2>Matcheur & Freelance</h2>
                 <hr color="#21ce99" align="left" width="10%" />
                 <p>
                   Deelpay facilite les freelances et matcheurs à recevoir les
-                  payements de prestation de service en un click. Deelpay
-                  facilite aussi les règlements de compte entre particuliers.
+                  payements de prestation de service en un click.
                 </p>
               </Col>
             </Row>
@@ -140,14 +162,17 @@ export default function Home() {
               </Col>
               <Col>
                 <Entreprise
-                  width={isMobileDevice?"100%":"50%"}
+                  width={isMobileDevice ? "100%" : "50%"}
                   height="200px"
                 />
               </Col>
             </Row>
             <Row className="py-4">
               <Col className="text-right">
-                <Developer width={isMobileDevice?"100%":"50%"} height="200px" />
+                <Developer
+                  width={isMobileDevice ? "100%" : "50%"}
+                  height="200px"
+                />
               </Col>
               <Col>
                 <h2>Développeur</h2>
@@ -161,10 +186,54 @@ export default function Home() {
           </div>
         </div>
         {/* Ecran expert et contact */}
-        <div className="container-expert-contact">
-          <h1 className="text-center text-white">Nos experts sont là pour vous guider</h1>
+        <div className="container-business-call py-2">
+          <div className="container div-container-business">
+            <div className="">
+              {!isMobileDevice &&<Smile height="280px" width="300px" />}
+            </div>
+            <div className="div-text-business">
+              <h3 className="text-left">
+                Votre business,
+                <br />
+                votre vie,
+                <br />
+                Notre sourire! {isMobileDevice &&<Smile height="48px" width="55px" />}
+              </h3>
+              <p className="mb-0 text-white">
+                Des nouvelles idées de business grâce à DeelPay.
+              </p>
+              <p className="text-white">
+                Télécharger et créer votre deelpay wallet et jouissez d'un service financier adapté à vos besoins du quotidien.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="section-contact py-5">
           <div className="container">
-
+            <Row>
+              <Col md="6">
+                <h3>Nos contacts</h3>
+                <hr color="#21ce99" align="left" width="10%" />
+                <div className="item-contact py-3" ><p className="mb-0"><Email height="18px" width="18px" className="mr-2"/>contact@deelpay.com</p></div>
+                <div className="item-contact py-3"><p className="mb-0"><Telephone height="18px" width="18px" className="mr-2"/>+243825342047</p></div>
+                <div className="item-contact py-3"><p className="mb-0"><Location height="18px" width="18px" className="mr-2"/>Congo DR, Butembo, Rue Président de la Rép, immeuble KIDUBAI 3e niveau</p></div>
+                <div className="mt-5">
+                  <h3>Nos experts vous répondent</h3>
+                  <hr color="#21ce99" align="left" width="10%" />
+                  <p>Notre équipe est à votre disposition pour répondre à vos questions concernant Deelpay.</p>
+                </div>
+              </Col>
+              <Col md="6">
+                <h3>Laises-nous un message</h3>
+                <hr color="#21ce99" align="left" width="10%" />
+                <form className="form-contact p-5">
+                  <div className="div-input-c mb-3"><label className="font-weight-bold mb-0 p-2">Nom</label><input type="text" name="name" className="p-2"/></div>
+                  <div className="div-input-c"><label className="font-weight-bold mb-0 p-2">Email</label><input type="email" name="name" className="p-2"/></div>
+                  <div className="div-textarea my-3"><label className="font-weight-bold mb-0 p-2">Votre message</label><textarea name="name" rows="6" className="p-2"/></div>
+                  <div className="text-right"><button className="px-5 py-2">Envoyer</button></div>
+                </form>
+              </Col>
+            </Row>
           </div>
         </div>
       </Layout>
@@ -205,8 +274,8 @@ export default function Home() {
         .container-features {
           background-color: #21ce99;
           font-family: "Maven Pro";
-          padding-top:30px;
-          padding-bottom:30px;
+          padding-top: 30px;
+          padding-bottom: 30px;
         }
         .container-features h3 {
           font-size: 2.4rem;
@@ -226,9 +295,89 @@ export default function Home() {
         .section-possibilities p {
           font-size: 1.2rem;
         }
-        
-        .container-expert-contact{
+
+        .container-business-call {
+          background-color: #000;
+          font-family: "Maven Pro";
+        }
+        .div-container-business{
+          display:flex;
+           align-items:center;
+        }
+        .div-text-business{
+          flex:1;
+        }
+        .div-container-business h3{
+          color:#21ce99;
+          font-size:2rem;
+          font-weight:bolder;
+        }
+        .div-container-business p{
+          font-size:1.2rem;
+        }
+        .section-contact{
+          font-family:"Maven Pro"
+        }
+        .section-contact h3{
+          color:#21ce99;
+          font-size:2rem
+        }
+        .section-contact p{
+          font-size:1.2rem;
+        }
+        .item-contact{
+          display:flex;
+          align-items:center;
+          border-bottom:1px solid rgba(0,0,0,0.1)
+        }
+        .form-contact{
+          /* background-color:#21ce99; */
+          border-radius:5px;
+        }
+        .form-contact button{
+          border:none;
+          background-color:#3d3d3d;
+          font-weight:bold;
+          color:#fff;
+          border-radius:5px;
+        }
+        .form-contact button:hover,
+        .form-contact:focus
+        {
+          outline:none;
           background-color:#000;
+        }
+        .form-contact label{
+          color:#000;
+          background-color:#21ce99;
+        }
+        .div-input-c{
+          display:flex;
+        }
+        .div-input-c input{
+          flex:1;
+          border:2px solid #21ce99;
+          border-radius: 0 5px 5px 0; 
+        }
+        .div-input-c input:focus{
+          outline:1px solid #f9f9f9;
+        }
+        .div-input-c label{
+          border-radius: 5px 0 0 5px;
+        }
+        .div-textarea{
+          display:flex;
+          flex-direction:column;
+        }
+        .div-textarea textarea{
+          border: 2px solid #21ce99;
+          border-radius: 0 0 5px 5px;
+        }
+        .div-textarea textarea:focus{
+          outline:1px solid #f9f9f9;
+        }
+        .div-textarea label{
+          border-radius:5px 5px 0 0;
         }
 
         @media (max-width: 767.9px) {

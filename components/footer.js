@@ -5,7 +5,7 @@ import Facebook from "../icons/facebook.svg";
 import Linkedin from "../icons/linkedin.svg";
 
 const Footer = () => {
-  
+
   return (
     <footer className="footer">
       <div className="container py-5">
@@ -47,8 +47,6 @@ const Footer = () => {
           <div className="col-md-4">
             <h6 className="footer-title">Restons connectés</h6>
             <hr color="#21ce99" align="left" width="20%" />
-            {/* Télécharger et créer votre deelpay wallet dans moins d'une minute
-              depuis votre mobile. */}
             <p>Inscrivez vous au newsletter</p>
             <form className="mb-4">
               <div className="div-input"><input type="email" placeholder="Votre email" className="p-3 font-weight-bold" /></div>
