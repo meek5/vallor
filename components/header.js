@@ -101,6 +101,10 @@ const Header = () => {
         }
         .list-menu a:hover {
           text-decoration: none;
+          color:#21ce99;
+        }
+        .list-menu a:active {
+          color:#21ce99;
         }
         .list-menu li:hover {
           color: #21ce99;
