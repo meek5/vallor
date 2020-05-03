@@ -25,16 +25,16 @@ const Header = () => {
               <a href="/">
                 <li className="mb-0">Accueil</li>
               </a>
-              <a href="/">
+              <a href="/portefeuille">
                 <li>Portefeuille</li>
               </a>
               <a href="/">
                 <li>Développeurs</li>
               </a>
-              <a href="/">
+              <a href="/#contact">
                 <li>Contact</li>
               </a>
-              <a href="/">
+              <a href="/faq">
                 <li>FAQ</li>
               </a>
             </ul>

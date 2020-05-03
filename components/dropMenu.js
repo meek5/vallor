@@ -9,10 +9,10 @@ function DropMenu({isMobMenu}) {
             </div>
             <ul className="mt-3">
                 <a href="/"><li className="mb-2">Accueil</li></a>
-                <a href="/"><li className="mb-2">Portefeuille</li></a>
+                <a href="/portefeuille"><li className="mb-2">Portefeuille</li></a>
                 <a href="/"><li className="mb-2">Développeurs</li></a>
-                <a href="/"><li className="mb-2">Contact</li></a>
-                <a href="/"><li className="mb-2">FAQ</li></a>
+                <a href="/#contact"><li className="mb-2">Contact</li></a>
+                <a href="/faq"><li className="mb-2">FAQ</li></a>
             </ul>
             <div className="text-center mt-5">
             <a href="/"><button className="px-5 py-2"><Download height="24px" className="mr-2" />Télécharger l'app</button></a>

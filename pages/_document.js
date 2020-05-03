@@ -15,6 +15,13 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          <style jsx global>{`
+        @font-face {
+          font-family: "Maven Pro";
+          src: url("/fonts/MavenPro-Regular.ttf");
+          font-display: swap;
+        }
+      `}</style>
         </body>
       </Html>
     );
