@@ -3,6 +3,7 @@ import Head from "next/head";
 import Layout from "../components/layout";
 import { Row, Col, ListGroup } from "reactstrap";
 import QuestionAnswer from "../components/question-answer"
+import Question from "../public/assets/images/question.svg"
 
 function Faq() {
   return (
@@ -27,6 +28,7 @@ function Faq() {
             </p>
             </Col>
             <Col>
+            <Question width="100%" height="300px"/>
             </Col>
             </Row>
           </div>
@@ -35,6 +37,38 @@ function Faq() {
             <div className="container">
             <ListGroup flush>
             <QuestionAnswer
+                question="Comment créer un compte Deelpay ?"
+                answer="Dans ce cas vous n'aurez rien à spécifier comme informations, car nous prendrons automatiquement tes informations provenant de Google. Dans tout cas il vous vaudra accepter nos conditions générales d'utilisation ainsi que notre déclaration de confidentialité."
+              />
+              <QuestionAnswer
+                question="Comment créer un compte tayarifood ?"
+                answer="Un compte tayarifood nécessite votre nom et un numéro de téléphone valide. Après avoir fourni ces informations, nous vous enverrons un SMS contenant un code de vérification de votre numéro. Vous pouvez également créer un compte à partir de votre compte Google."
+              />
+              <QuestionAnswer
+                question="Comment créer un compte Deelpay ?"
+                answer="Dans ce cas vous n'aurez rien à spécifier comme informations, car nous prendrons automatiquement tes informations provenant de Google. Dans tout cas il vous vaudra accepter nos conditions générales d'utilisation ainsi que notre déclaration de confidentialité."
+              />
+              <QuestionAnswer
+                question="Comment créer un compte tayarifood ?"
+                answer="Un compte tayarifood nécessite votre nom et un numéro de téléphone valide. Après avoir fourni ces informations, nous vous enverrons un SMS contenant un code de vérification de votre numéro. Vous pouvez également créer un compte à partir de votre compte Google."
+              />
+              <QuestionAnswer
+                question="Comment créer un compte Deelpay ?"
+                answer="Dans ce cas vous n'aurez rien à spécifier comme informations, car nous prendrons automatiquement tes informations provenant de Google. Dans tout cas il vous vaudra accepter nos conditions générales d'utilisation ainsi que notre déclaration de confidentialité."
+              />
+              <QuestionAnswer
+                question="Comment créer un compte tayarifood ?"
+                answer="Un compte tayarifood nécessite votre nom et un numéro de téléphone valide. Après avoir fourni ces informations, nous vous enverrons un SMS contenant un code de vérification de votre numéro. Vous pouvez également créer un compte à partir de votre compte Google."
+              />
+              <QuestionAnswer
+                question="Comment créer un compte Deelpay ?"
+                answer="Dans ce cas vous n'aurez rien à spécifier comme informations, car nous prendrons automatiquement tes informations provenant de Google. Dans tout cas il vous vaudra accepter nos conditions générales d'utilisation ainsi que notre déclaration de confidentialité."
+              />
+              <QuestionAnswer
+                question="Comment créer un compte tayarifood ?"
+                answer="Un compte tayarifood nécessite votre nom et un numéro de téléphone valide. Après avoir fourni ces informations, nous vous enverrons un SMS contenant un code de vérification de votre numéro. Vous pouvez également créer un compte à partir de votre compte Google."
+              />
+              <QuestionAnswer
                 question="Comment créer un compte Deelpay ?"
                 answer="Dans ce cas vous n'aurez rien à spécifier comme informations, car nous prendrons automatiquement tes informations provenant de Google. Dans tout cas il vous vaudra accepter nos conditions générales d'utilisation ainsi que notre déclaration de confidentialité."
               />

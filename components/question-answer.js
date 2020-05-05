@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ListGroupItem } from "reactstrap";
-import Down from "../icons/down.svg";
-import Up from "../icons/up.svg"
+import Plus from "../icons/plus.svg";
+import Less from "../icons/less.svg"
 
 function QuestionAnswer({ question, answer }) {
   const [showAnswer, setshowAnswer] = useState(false);
@@ -14,7 +14,7 @@ function QuestionAnswer({ question, answer }) {
         <h5 className="mb-0" className="question-text">
           <span>&rarr; </span>{question}
         </h5>
-        <div className="chevron-icon">{showAnswer ?<Up height="16px" width="16px" />:<Down height="16px" width="16px" className="icon"/>}</div>
+        <div className="chevron-icon">{showAnswer ?<Less height="16px" width="16px" />:<Plus height="16px" width="16px" className="icon"/>}</div>
       </div>
       {showAnswer && (
         <div className="px-3 py-2 answer-div">
@@ -50,7 +50,7 @@ function QuestionAnswer({ question, answer }) {
               display:flex;
               align-items:center;
               justify-content:center;
-              background-color:#fff;
+              background-color:#3d3d3d;
               height:32px;
               width:32px;
               border-radius:50%
