@@ -18,7 +18,7 @@ class MyDocument extends Document {
           <style jsx global>{`
         @font-face {
           font-family: "Maven Pro";
-          src: url("./fonts/MavenPro-Regular.ttf");
+          src: local("Maven Pro"), local(MavenPro), url("./fonts/MavenPro-Regular.ttf");
           font-display: swap;
         }
       `}</style>
