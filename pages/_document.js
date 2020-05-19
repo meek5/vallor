@@ -11,6 +11,7 @@ class MyDocument extends Document {
             <meta name="theme-color" content="#21ce99" />
             <meta name="copyright" content="© Deelpay" />
             <link rel="icon" href="/favicon.ico" />
+            <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap" rel="stylesheet"></link>
         </Head>
         <body>
           <Main />
