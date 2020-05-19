@@ -25,7 +25,7 @@ function Portefeuille() {
                   <div className="container-smile">
                     <div className="image-smile">
                       <img
-                        src="/assets/images/smile.jpg"
+                        src="./assets/images/smile.jpg"
                         width="90%"
                         height="300px"
                         alt="deelpay sourire"
@@ -54,7 +54,7 @@ function Portefeuille() {
                 </p>
                 {isMobileDevice && (
                   <img
-                    src="/assets/images/smile.jpg"
+                    src="./assets/images/smile.jpg"
                     width="100%"
                     alt="deelpay sourire"
                   />
@@ -73,7 +73,7 @@ function Portefeuille() {
                 <div className="text-center">
                   {!isMobileDevice && (
                     <img
-                      src="/assets/images/smile2.jpg"
+                      src="./assets/images/smile2.jpg"
                       alt="deelpay operation"
                       width="70%"
                     />
@@ -113,7 +113,7 @@ function Portefeuille() {
                   <div className="pt-2">
                     {isMobileDevice && (
                       <img
-                        src="/assets/images/smile2.jpg"
+                        src="./assets/images/smile2.jpg"
                         alt="deelpay operation"
                         width="100%"
                       />

@@ -12,7 +12,7 @@ const Header = () => {
   const toggleMobMenu = () => {
     setisMobMenu(!isMobMenu);
   };
-  console.log(isMobMenu);
+
   return (
     <header className="py-3">
       <div className="container-header">
