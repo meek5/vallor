@@ -24,22 +24,22 @@ const Footer = () => {
             <h6 className="footer-title">Développeurs</h6>
             <hr color="#21ce99" align="left" width="20%" />
             <ul className="list-about">
-              <a href="/">
+              <a href="/developpeurs">
                 <li>API & Documentation</li>
               </a>
-              <a href="/">
+              <a href="/developpeurs">
                 <li>Intégrer deelpay</li>
               </a>
               <a href="/">
                 <li>Communauté & Meetup</li>
               </a>
-              <a href="/">
+              {/* <a href="/">
                 <li>Emplois & Freelance</li>
-              </a>
+              </a> */}
               <a href="/">
                 <li>Blog</li>
               </a>
-              <a href="/">
+              <a href="/#contact">
                 <li>Service clients</li>
               </a>
             </ul>

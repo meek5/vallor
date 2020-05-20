@@ -10,7 +10,7 @@ function DropMenu({isMobMenu}) {
             <ul className="mt-3">
                 <a href="/"><li className="mb-2">Accueil</li></a>
                 <a href="/portefeuille"><li className="mb-2">Portefeuille</li></a>
-                <a href="/"><li className="mb-2">Développeurs</li></a>
+                <a href="/developpeurs"><li className="mb-2">Développeurs</li></a>
                 <a href="/#contact"><li className="mb-2">Contact</li></a>
                 <a href="/faq"><li className="mb-2">FAQ</li></a>
             </ul>
