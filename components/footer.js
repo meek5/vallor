@@ -87,7 +87,7 @@ const Footer = () => {
             <a href="/">
               <span>Politique de confidentialité</span>
             </a>
-            <br />© deelpay 2020
+            <br />© deelpay 2020 Tous droits réservés.
           </p>
         </div>
       </div>
