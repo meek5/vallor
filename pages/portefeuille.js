@@ -14,7 +14,13 @@ function Portefeuille() {
   return (
     <div>
       <Head>
-        <title>Portefeuille</title>
+        <title>Portefeuille Deelpay</title>
+        <meta
+          name="description"
+          content="Deelpay est un portefeuille electronique conçue pour les petits commerces. Deelpay est simple, rapide et sécurisé pour payer en magasin et dans des applications web et mobile. Il facilite également les paiements entre particuliers."
+        />
+        <meta name="keywords" content="deelpay,portefeuille,porte-monnaie,electronique,mobile,money,envoi,retrait,dépôt,moyen,paiement,simple,rapide,sécurisé,ewallet,commerce,ecommerce,magasin,agence,cash point,business,api,developpeur" />
+        <meta name="author" content="Deelpay" />
       </Head>
       <Layout>
         <div className="container-home-wallet">
@@ -227,6 +233,7 @@ function Portefeuille() {
           background-color: #000;
           padding-top: 50px;
           padding-bottom: 50px;
+          font-family:"Maven Pro"
         }
         .section-operations img {
           border-radius: 5px;
