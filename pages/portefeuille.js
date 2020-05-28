@@ -55,8 +55,8 @@ function Portefeuille() {
                 <p>
                   Avec Deelpay, chaque utilisateur peut ajouter de l'argent dans
                   son compte par carte bancaire ou depuis une agence Deelpay et
-                  gérer son argent sur son téléphone ou son ordinateur avec
-                  notre tableau de bord Deelpay.
+                  gérer son argent sur son téléphone ou son ordinateur sur
+                  le tableau de bord Deelpay.
                 </p>
                 {isMobileDevice && (
                   <img
