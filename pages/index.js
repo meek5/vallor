@@ -84,7 +84,7 @@ export default function Home() {
                   <Faster height="100px" width="120px" />
                   <h3 className="text-white">Rapide</h3>
                   <p className="mb-0">
-                    Accélérer vos payement à une vitesse de lumière.
+                    Accélérer vos payement à une vitesse incroyable.
                   </p>
                 </div>
               </Col>
@@ -106,7 +106,7 @@ export default function Home() {
           <div className="container">
             <Row className="py-4">
               <Col className="text-right">
-                <h2>Paiement peer to peer</h2>
+                <h2>Paiement entre particuliers</h2>
                 <hr color="#21ce99" align="right" width="10%" />
                 <p>
                   Deelpay permet à transférer de l'argent à vos proches sans se
@@ -262,7 +262,7 @@ export default function Home() {
                 </div>
               </Col>
               <Col md="6">
-                <h3>Laises-nous un message</h3>
+                <h3>Laisses-nous un message</h3>
                 <hr color="#21ce99" align="left" width="10%" />
                 <form className="form-contact">
                   <div className="div-input-c mb-3">
