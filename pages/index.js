@@ -104,7 +104,7 @@ export default function Home() {
           <h1 className="text-center my-5">À chacun sa part</h1>
           <div className="container">
             <Row className="py-4">
-              <Col className="text-right">
+              <Col className="text-right" xs="8" sm="6" >
                 <h2>Paiement entre particuliers</h2>
                 <hr color="#21ce99" align="right" width="10%" />
                 <p>
@@ -113,7 +113,7 @@ export default function Home() {
                   particuliers.
                 </p>
               </Col>
-              <Col className="">
+              <Col className="" xs="4" sm="6">
                 <PeerTPeer
                   width={isMobileDevice ? "100%" : "50%"}
                   height="200px"
@@ -121,13 +121,13 @@ export default function Home() {
               </Col>
             </Row>
             <Row className="py-4">
-              <Col className="text-right">
+              <Col className="text-right" xs="4" sm="6">
                 <Shoper
                   width={isMobileDevice ? "100%" : "50%"}
                   height="200px"
                 />
               </Col>
-              <Col className="">
+              <Col className="" xs="8" sm="6">
                 <h2>Commerçant</h2>
                 <hr color="#21ce99" align="left" width="10%" />
                 <p>
@@ -138,7 +138,7 @@ export default function Home() {
               </Col>
             </Row>
             <Row className="py-4">
-              <Col className="text-right">
+              <Col className="text-right" xs="8" sm="6">
                 <h2>Donateur</h2>
                 <hr color="#21ce99" align="right" width="10%" />
                 <p>
@@ -146,18 +146,18 @@ export default function Home() {
                   dons et contribuer à des projets charitatifs plus facilement.
                 </p>
               </Col>
-              <Col className="">
+              <Col className="" xs="4" sm="6">
                 <Donor width={isMobileDevice ? "100%" : "50%"} height="200px" />
               </Col>
             </Row>
-            <Row className="py-4">
+            <Row className="py-4" xs="4" sm="6">
               <Col className="text-right">
                 <Freelance
                   width={isMobileDevice ? "100%" : "50%"}
                   height="200px"
                 />
               </Col>
-              <Col>
+              <Col xs="8" sm="6">
                 <h2>Matcheur & Freelance</h2>
                 <hr color="#21ce99" align="left" width="10%" />
                 <p>
@@ -167,7 +167,7 @@ export default function Home() {
               </Col>
             </Row>
             <Row className="py-4">
-              <Col className="text-right">
+              <Col className="text-right" xs="8" sm="6">
                 <h2>Entreprise</h2>
                 <hr color="#21ce99" align="right" width="10%" />
                 <p>
@@ -176,7 +176,7 @@ export default function Home() {
                   ou produits qu'elles offrent.{" "}
                 </p>
               </Col>
-              <Col>
+              <Col xs="4" sm="6">
                 <Entreprise
                   width={isMobileDevice ? "100%" : "50%"}
                   height="200px"
@@ -184,13 +184,13 @@ export default function Home() {
               </Col>
             </Row>
             <Row className="py-4">
-              <Col className="text-right">
+              <Col className="text-right" xs="4" sm="6">
                 <Developer
                   width={isMobileDevice ? "100%" : "50%"}
                   height="200px"
                 />
               </Col>
-              <Col>
+              <Col xs="8" sm="6">
                 <h2>Développeur</h2>
                 <hr color="#21ce99" align="left" width="10%" />
                 <p>
