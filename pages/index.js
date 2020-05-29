@@ -45,7 +45,6 @@ export default function Home() {
             <Col md="6">
               <h1 className="home-title">
                 Deelpay{" "}
-                <Wallet className="wallet-icon" width="64px" height="64" />
               </h1>
               <hr color="#21ce99" align="left" width="20%" />
               <p className="home-message">
@@ -55,7 +54,7 @@ export default function Home() {
               </p>
               <div className="text-left mb-5">
                 <button className="btn-home-download px-5 py-2 font-weight-bold">
-                  Télécharger l'application
+                  Télécharger
                 </button>
               </div>
             </Col>
@@ -261,11 +260,12 @@ export default function Home() {
                   </p>
                 </div>
               </Col>
-              <Col md="6">
-                <h3>Laisses-nous un message</h3>
+              <Col md="6" >
+                <div className="col-contact-deelpay">
+               <h3>Laisses-nous un message</h3>
                 <hr color="#21ce99" align="left" width="10%" />
-                <form className="form-contact">
-                  <div className="div-input-c mb-3">
+                <form className="form-contact"> 
+                   <div className="div-input-c mb-3">
                     <label className="font-weight-bold mb-0 p-2">Nom</label>
                     <input type="text" name="name" className="p-2" />
                   </div>
@@ -273,7 +273,7 @@ export default function Home() {
                     <label className="font-weight-bold mb-0 p-2">Email</label>
                     <input type="email" name="name" className="p-2" />
                   </div>
-                  <div className="div-textarea my-3">
+                   <div className="div-textarea my-3">
                     <label className="font-weight-bold mb-0 p-2">
                       Votre message
                     </label>
@@ -282,7 +282,8 @@ export default function Home() {
                   <div className="text-right">
                     <button className="px-5 py-2">Envoyer</button>
                   </div>
-                </form>
+                </form> 
+                </div> 
               </Col>
             </Row>
           </div>
@@ -401,6 +402,14 @@ export default function Home() {
           display: flex;
           align-items: center;
           border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        .col-contact-deelpay{
+          display:none;
+        }
+        @media (min-width:768px){
+          .col-contact-deelpay{
+            display:block
+          }
         }
         .form-contact {
           /* background-color:#21ce99; */
