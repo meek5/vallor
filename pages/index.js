@@ -114,18 +114,22 @@ export default function Home() {
                 </p>
               </Col>
               <Col className="" xs="4" sm="6">
-                <PeerTPeer
-                  width={isMobileDevice ? "100%" : "50%"}
-                  height="200px"
-                />
+                <div className="img-peer-to-peer">
+                  {/* <PeerTPeer
+                    width={isMobileDevice ? "100%" : "50%"}
+                    height="200px"
+                  /> */}
+                </div>
               </Col>
             </Row>
             <Row className="py-4">
               <Col className="text-right" xs="4" sm="6">
-                <Shoper
+                <div className="img-shoper">
+                {/* <Shoper
                   width={isMobileDevice ? "100%" : "50%"}
                   height="200px"
-                />
+                /> */}
+                </div>
               </Col>
               <Col className="" xs="8" sm="6">
                 <h2>Commerçant</h2>
@@ -147,15 +151,19 @@ export default function Home() {
                 </p>
               </Col>
               <Col className="" xs="4" sm="6">
-                <Donor width={isMobileDevice ? "100%" : "50%"} height="200px" />
+                <div className="img-donor">
+                {/* <Donor width={isMobileDevice ? "100%" : "50%"} height="200px" /> */}
+                </div>
               </Col>
             </Row>
-            <Row className="py-4" xs="4" sm="6">
-              <Col className="text-right">
-                <Freelance
+            <Row className="py-4" >
+              <Col className="text-right" xs="4" sm="6">
+                <div className="img-freelance">
+                {/* <Freelance
                   width={isMobileDevice ? "100%" : "50%"}
                   height="200px"
-                />
+                /> */}
+                </div>
               </Col>
               <Col xs="8" sm="6">
                 <h2>Matcheur & Freelance</h2>
@@ -177,18 +185,22 @@ export default function Home() {
                 </p>
               </Col>
               <Col xs="4" sm="6">
-                <Entreprise
+                <div className="img-entreprise">
+                {/* <Entreprise
                   width={isMobileDevice ? "100%" : "50%"}
                   height="200px"
-                />
+                /> */}
+                </div>
               </Col>
             </Row>
             <Row className="py-4">
               <Col className="text-right" xs="4" sm="6">
-                <Developer
+                <div className="img-developer">
+                {/* <Developer
                   width={isMobileDevice ? "100%" : "50%"}
                   height="200px"
-                />
+                /> */}
+                </div>
               </Col>
               <Col xs="8" sm="6">
                 <h2>Développeur</h2>
@@ -367,6 +379,60 @@ export default function Home() {
         }
         .section-possibilities p {
           font-size: 1.2rem;
+        }
+
+        .img-peer-to-peer{
+          height:200px;
+          background-image: url("./assets/images/peertopeer.svg");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-attachment: scroll;
+          background-position: left;
+        }
+
+        .img-shoper{
+          height:200px;
+          background-image: url("./assets/images/shoper.svg");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-attachment: scroll;
+          background-position: right;
+        }
+
+        .img-donor{
+          height:200px;
+          background-image: url("./assets/images/donor.svg");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-attachment: scroll;
+          background-position: left;
+        }
+
+        .img-freelance{
+          height:200px;
+          background-image: url("./assets/images/freelance.svg");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-attachment: scroll;
+          background-position: right;
+        }
+
+        .img-entreprise{
+          height:200px;
+          background-image: url("./assets/images/entreprise.svg");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-attachment: scroll;
+          background-position: left;
+        }
+
+        .img-developer{
+          height:200px;
+          background-image: url("./assets/images/developer.svg");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-attachment: scroll;
+          background-position: right;
         }
 
         .container-business-call {
