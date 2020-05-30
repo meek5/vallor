@@ -16,6 +16,7 @@ import Entreprise from "../public/assets/images/entreprise.svg";
 import Smile from "../public/assets/images/smile.svg";
 import PeerTPeer from "../public/assets/images/peertopeer.svg";
 import Email from "../icons/email.svg";
+import Envelope from "../icons/envelope.svg"
 import Telephone from "../icons/telephone.svg";
 import Location from "../icons/location.svg";
 import { useMediaQuery } from "react-responsive";
@@ -307,7 +308,7 @@ const sendMessageTodeelpayTeam =()=>{
             </form>
           ) : (
             <div className="btn-message" onClick={toggleFoatingBtn}>
-              <Email width="48px" height="32px" />
+              <Envelope width="48px" height="32px" />
             </div>
           )}
         </div>
@@ -557,7 +558,7 @@ const sendMessageTodeelpayTeam =()=>{
         }
         .btn-message:hover {
           cursor: pointer;
-          background-color: #21ce99;
+          box-shadow: 1px 2px 3px #3d3d3d;
         }
 
         .form-message-floating-btn {
