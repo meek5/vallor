@@ -114,22 +114,12 @@ export default function Home() {
                 </p>
               </Col>
               <Col className="" xs="4" sm="6">
-                <div className="img-peer-to-peer">
-                  {/* <PeerTPeer
-                    width={isMobileDevice ? "100%" : "50%"}
-                    height="200px"
-                  /> */}
-                </div>
+                <div className="img-peer-to-peer"/>
               </Col>
             </Row>
             <Row className="py-4">
               <Col className="text-right" xs="4" sm="6">
-                <div className="img-shoper">
-                {/* <Shoper
-                  width={isMobileDevice ? "100%" : "50%"}
-                  height="200px"
-                /> */}
-                </div>
+                <div className="img-shoper"/>
               </Col>
               <Col className="" xs="8" sm="6">
                 <h2>Commerçant</h2>
@@ -151,19 +141,12 @@ export default function Home() {
                 </p>
               </Col>
               <Col className="" xs="4" sm="6">
-                <div className="img-donor">
-                {/* <Donor width={isMobileDevice ? "100%" : "50%"} height="200px" /> */}
-                </div>
+                <div className="img-donor"/>
               </Col>
             </Row>
             <Row className="py-4" >
               <Col className="text-right" xs="4" sm="6">
-                <div className="img-freelance">
-                {/* <Freelance
-                  width={isMobileDevice ? "100%" : "50%"}
-                  height="200px"
-                /> */}
-                </div>
+                <div className="img-freelance"/>
               </Col>
               <Col xs="8" sm="6">
                 <h2>Matcheur & Freelance</h2>
@@ -185,22 +168,12 @@ export default function Home() {
                 </p>
               </Col>
               <Col xs="4" sm="6">
-                <div className="img-entreprise">
-                {/* <Entreprise
-                  width={isMobileDevice ? "100%" : "50%"}
-                  height="200px"
-                /> */}
-                </div>
+                <div className="img-entreprise"/>
               </Col>
             </Row>
             <Row className="py-4">
               <Col className="text-right" xs="4" sm="6">
-                <div className="img-developer">
-                {/* <Developer
-                  width={isMobileDevice ? "100%" : "50%"}
-                  height="200px"
-                /> */}
-                </div>
+                <div className="img-developer"/>
               </Col>
               <Col xs="8" sm="6">
                 <h2>Développeur</h2>
@@ -300,11 +273,19 @@ export default function Home() {
             </Row>
           </div>
         </div>
+        <div className="message-float-btn-container">
+          <div>
 
-        {isMobileDevice && isPopUpDownload && (
+          </div>
+          <div className="btn-message">
+            <Email width="48px" height="32px"/>
+          </div>
+        </div>
+        {
+        /* {isMobileDevice && isPopUpDownload && (
           <div className="container-download-popup p-3">
             {/* <div className="div-icon"></div> */}
-            <a href="/">
+            {/* <a href="/">
               <div>
                 <Deelpay height="48px" width="48px" />
               </div>
@@ -319,8 +300,8 @@ export default function Home() {
             <div>
               <button onClick={togglePopupDownload}>x</button>
             </div>
-          </div>
-        )}
+          </div> */}
+        {/* )}  */}
       </Layout>
       <style jsx>{`
         .container-section-home {
@@ -526,7 +507,29 @@ export default function Home() {
           border-radius: 5px 5px 0 0;
         }
 
-        .container-download-popup {
+        .message-float-btn-container{
+          position:fixed;
+          bottom:10px;
+          right:10px;
+        }
+
+        .btn-message{
+          height:72px;
+          width:72px;
+          border-radius:50%;
+          background-color:#fff;
+          border:4px solid #fff;
+          box-shadow:1px 2px 3px rgba(0,0,0,0.3);
+          display:flex;
+          align-items:center;
+          justify-content:center
+        }
+        .btn-message:hover{
+          cursor:pointer;
+          background-color:#21ce99;
+        }
+
+        /* .container-download-popup {
           position: fixed;
           display: flex;
           align-items: center;
@@ -558,7 +561,7 @@ export default function Home() {
         }
         .div-download-text p {
           color: rgba(255,255,255,0.5);
-        }
+        } */
 
         @media (max-width: 767.9px) {
           .container-section-home {
