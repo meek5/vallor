@@ -541,6 +541,7 @@ const sendMessageTodeelpayTeam =()=>{
           bottom: 10px;
           right: 10px;
           z-index:200;
+          margin-left:10px;
         }
 
         .btn-message {
