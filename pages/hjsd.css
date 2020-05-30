@@ -4,4 +4,6 @@ img-peer-to-peer{
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: right;
+    height: fit-content;
+    
 }

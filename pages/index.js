@@ -23,9 +23,19 @@ import { useMediaQuery } from "react-responsive";
 export default function Home() {
   const isMobileDevice = useMediaQuery({ query: "(max-width:767.9px)" });
   const [isPopUpDownload, setisPopUpDownload] = useState(true);
-  const togglePopupDownload = () => {
-    setisPopUpDownload(false);
+  const [isFloatingBtn, setisFloatingBtn] = useState(false);
+  // const togglePopupDownload = () => {
+  //   setisPopUpDownload(false);
+  // };
+
+  const toggleFoatingBtn = () => {
+    setisFloatingBtn(!isFloatingBtn);
   };
+
+const sendMessageTodeelpayTeam =()=>{
+  toggleFoatingBtn()
+}
+
   return (
     <div className="">
       <Head>
@@ -34,7 +44,10 @@ export default function Home() {
           name="description"
           content="Deelpay est un portefeuille electronique conçue pour les petits commerces. Deelpay est simple, rapide et sécurisé pour payer en magasin et dans des applications web et mobile. Il facilite également les paiements entre particuliers."
         />
-        <meta name="keywords" content="deelpay,portefeuille,porte-monnaie,electronique,mobile,money,envoi,retrait,dépôt,moyen,paiement,simple,rapide,sécurisé,ewallet,commerce,ecommerce,magasin,agence,cash point,business,api,developpeur" />
+        <meta
+          name="keywords"
+          content="deelpay,portefeuille,porte-monnaie,electronique,mobile,money,envoi,retrait,dépôt,moyen,paiement,simple,rapide,sécurisé,ewallet,commerce,ecommerce,magasin,agence,cash point,business,api,developpeur"
+        />
         <meta name="author" content="Deelpay" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -43,9 +56,7 @@ export default function Home() {
         <div className="container container-section-home">
           <Row>
             <Col md="6">
-              <h1 className="home-title">
-                Deelpay{" "}
-              </h1>
+              <h1 className="home-title">Deelpay </h1>
               <hr color="#21ce99" align="left" width="20%" />
               <p className="home-message">
                 Un portefeuille electronique conçue pour les petits commerces.
@@ -104,7 +115,7 @@ export default function Home() {
           <h1 className="text-center my-5">À chacun sa part</h1>
           <div className="container">
             <Row className="py-4">
-              <Col className="text-right" xs="8" sm="6" >
+              <Col className="text-right" xs="8" sm="6">
                 <h2>Paiement entre particuliers</h2>
                 <hr color="#21ce99" align="right" width="10%" />
                 <p>
@@ -114,12 +125,12 @@ export default function Home() {
                 </p>
               </Col>
               <Col className="" xs="4" sm="6">
-                <div className="img-peer-to-peer"/>
+                <div className="img-peer-to-peer" />
               </Col>
             </Row>
             <Row className="py-4">
               <Col className="text-right" xs="4" sm="6">
-                <div className="img-shoper"/>
+                <div className="img-shoper" />
               </Col>
               <Col className="" xs="8" sm="6">
                 <h2>Commerçant</h2>
@@ -141,12 +152,12 @@ export default function Home() {
                 </p>
               </Col>
               <Col className="" xs="4" sm="6">
-                <div className="img-donor"/>
+                <div className="img-donor" />
               </Col>
             </Row>
-            <Row className="py-4" >
+            <Row className="py-4">
               <Col className="text-right" xs="4" sm="6">
-                <div className="img-freelance"/>
+                <div className="img-freelance" />
               </Col>
               <Col xs="8" sm="6">
                 <h2>Matcheur & Freelance</h2>
@@ -168,12 +179,12 @@ export default function Home() {
                 </p>
               </Col>
               <Col xs="4" sm="6">
-                <div className="img-entreprise"/>
+                <div className="img-entreprise" />
               </Col>
             </Row>
             <Row className="py-4">
               <Col className="text-right" xs="4" sm="6">
-                <div className="img-developer"/>
+                <div className="img-developer" />
               </Col>
               <Col xs="8" sm="6">
                 <h2>Développeur</h2>
@@ -245,47 +256,65 @@ export default function Home() {
                   </p>
                 </div>
               </Col>
-              <Col md="6" >
+              <Col md="6">
                 <div className="col-contact-deelpay">
-               <h3>Laisses-nous un message</h3>
-                <hr color="#21ce99" align="left" width="10%" />
-                <form className="form-contact"> 
-                   <div className="div-input-c mb-3">
-                    <label className="font-weight-bold mb-0 p-2">Nom</label>
-                    <input type="text" name="name" className="p-2" />
-                  </div>
-                  <div className="div-input-c">
-                    <label className="font-weight-bold mb-0 p-2">Email</label>
-                    <input type="email" name="name" className="p-2" />
-                  </div>
-                   <div className="div-textarea my-3">
-                    <label className="font-weight-bold mb-0 p-2">
-                      Votre message
-                    </label>
-                    <textarea name="name" rows="6" className="p-2" />
-                  </div>
-                  <div className="text-right">
-                    <button className="px-5 py-2">Envoyer</button>
-                  </div>
-                </form> 
-                </div> 
+                  <h3>Laisses-nous un message</h3>
+                  <hr color="#21ce99" align="left" width="10%" />
+                  <form className="form-contact">
+                    <div className="div-input-c mb-3">
+                      <label className="font-weight-bold mb-0 p-2">Nom</label>
+                      <input type="text" name="name" className="p-2" />
+                    </div>
+                    <div className="div-input-c">
+                      <label className="font-weight-bold mb-0 p-2">Email</label>
+                      <input type="email" name="name" className="p-2" />
+                    </div>
+                    <div className="div-textarea my-3">
+                      <label className="font-weight-bold mb-0 p-2">
+                        Votre message
+                      </label>
+                      <textarea name="name" rows="6" className="p-2" />
+                    </div>
+                    <div className="text-right">
+                      <button className="px-5 py-2">Envoyer</button>
+                    </div>
+                  </form>
+                </div>
               </Col>
             </Row>
           </div>
         </div>
         <div className="message-float-btn-container">
-          <div>
-
-          </div>
-          <div className="btn-message">
-            <Email width="48px" height="32px"/>
-          </div>
+          {isFloatingBtn ? (
+            <form onSubmit={sendMessageTodeelpayTeam} className="form-message-floating-btn">
+              <div className="form-message-header mb-0 px-1 py-2">
+                <h4>✍️ Laisses nous un message</h4>
+                <button onClick={toggleFoatingBtn} className="ml-3">X</button>
+              </div>
+              <div className="p-3">
+              <div className="div-input-message">
+                <label >*Votre email</label>
+                <input type="email" className="p-2" required/>
+              </div>
+              <div className="div-input-message mb-3">
+                <label>*Votre message</label>
+                <textarea className="p-2" required></textarea>
+              </div>
+              <div className="text-right">
+                <button type="submit" className="btn-send-message px-4 py-2">Envoyer</button>
+              </div>
+              </div>
+            </form>
+          ) : (
+            <div className="btn-message" onClick={toggleFoatingBtn}>
+              <Email width="48px" height="32px" />
+            </div>
+          )}
         </div>
-        {
-        /* {isMobileDevice && isPopUpDownload && (
+        {/* {isMobileDevice && isPopUpDownload && (
           <div className="container-download-popup p-3">
             {/* <div className="div-icon"></div> */}
-            {/* <a href="/">
+        {/* <a href="/">
               <div>
                 <Deelpay height="48px" width="48px" />
               </div>
@@ -362,8 +391,8 @@ export default function Home() {
           font-size: 1.2rem;
         }
 
-        .img-peer-to-peer{
-          height:200px;
+        .img-peer-to-peer {
+          height: 200px;
           background-image: url("./assets/images/peertopeer.svg");
           background-size: contain;
           background-repeat: no-repeat;
@@ -371,8 +400,8 @@ export default function Home() {
           background-position: left;
         }
 
-        .img-shoper{
-          height:200px;
+        .img-shoper {
+          height: 200px;
           background-image: url("./assets/images/shoper.svg");
           background-size: contain;
           background-repeat: no-repeat;
@@ -380,8 +409,8 @@ export default function Home() {
           background-position: right;
         }
 
-        .img-donor{
-          height:200px;
+        .img-donor {
+          height: 200px;
           background-image: url("./assets/images/donor.svg");
           background-size: contain;
           background-repeat: no-repeat;
@@ -389,8 +418,8 @@ export default function Home() {
           background-position: left;
         }
 
-        .img-freelance{
-          height:200px;
+        .img-freelance {
+          height: 200px;
           background-image: url("./assets/images/freelance.svg");
           background-size: contain;
           background-repeat: no-repeat;
@@ -398,8 +427,8 @@ export default function Home() {
           background-position: right;
         }
 
-        .img-entreprise{
-          height:200px;
+        .img-entreprise {
+          height: 200px;
           background-image: url("./assets/images/entreprise.svg");
           background-size: contain;
           background-repeat: no-repeat;
@@ -407,8 +436,8 @@ export default function Home() {
           background-position: left;
         }
 
-        .img-developer{
-          height:200px;
+        .img-developer {
+          height: 200px;
           background-image: url("./assets/images/developer.svg");
           background-size: contain;
           background-repeat: no-repeat;
@@ -450,12 +479,12 @@ export default function Home() {
           align-items: center;
           border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         }
-        .col-contact-deelpay{
-          display:none;
+        .col-contact-deelpay {
+          display: none;
         }
-        @media (min-width:768px){
-          .col-contact-deelpay{
-            display:block
+        @media (min-width: 768px) {
+          .col-contact-deelpay {
+            display: block;
           }
         }
         .form-contact {
@@ -507,28 +536,89 @@ export default function Home() {
           border-radius: 5px 5px 0 0;
         }
 
-        .message-float-btn-container{
-          position:fixed;
-          bottom:10px;
-          right:10px;
+        .message-float-btn-container {
+          position: fixed;
+          bottom: 10px;
+          right: 10px;
+          z-index:200;
         }
 
-        .btn-message{
-          height:72px;
-          width:72px;
-          border-radius:50%;
-          background-color:#fff;
-          border:4px solid #fff;
-          box-shadow:1px 2px 3px rgba(0,0,0,0.3);
+        .btn-message {
+          height: 72px;
+          width: 72px;
+          border-radius: 50%;
+          background-color: #fff;
+          border: 4px solid #fff;
+          box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .btn-message:hover {
+          cursor: pointer;
+          background-color: #21ce99;
+        }
+
+        .form-message-floating-btn {
+          background-color: #21ce99;
+          border-radius:10px;
+          box-shadow:2px 2px 2px 1px rgba(255,255,255,1);
+        }
+
+        .form-message-header{
           display:flex;
           align-items:center;
-          justify-content:center
+          border-bottom:2px solid #3d3d3d;
         }
-        .btn-message:hover{
-          cursor:pointer;
-          background-color:#21ce99;
+        .form-message-header h4{
+          flex:1;
+        }
+        .form-message-header button{
+          border:none;
+          background-color:transparent;
+          height:22px;
+          width:22px;
+          border-radius:50%;
         }
 
+        .form-message-header button:hover,
+        .form-message-header button:focus{
+          outline:none;
+          background-color:#fff;
+        }
+        .form-message-floating-btn .btn-send-message{
+          border: none;
+          background-color: #3d3d3d;
+          font-weight: bold;
+          color: #fff;
+          border-radius: 5px;
+
+        }
+        .form-message-floating-btn .btn-send-message:hover,
+        .form-message-floating-btn .btn-send-message:focus{
+          background-color:#000;
+        }
+
+        .form-message-floating-btn .div-input-message{
+          display:flex;
+          flex-direction:column;
+        }
+       .div-input-message label{
+         color:#3d3d3d;
+         font-weight:bold;
+       }
+       .div-input-message input,
+       .div-input-message textarea{
+        border-radius:5px;
+        border:none;
+        border-bottom:2px solid #fff
+       }
+       .div-input-message input:focus,
+       .div-input-message textarea:focus{
+         outline:none;
+         border-bottom:2px solid #3d3d3d;
+         color:#3d3d3d;
+       }
         /* .container-download-popup {
           position: fixed;
           display: flex;
