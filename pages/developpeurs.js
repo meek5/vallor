@@ -8,12 +8,12 @@ function Developpeurs() {
   return (
     <div>
       <Head>
-        <title>Developpeurs</title>
+        <title>Développeurs</title>
         <meta
           name="description"
-          content="Deelpay est un portefeuille electronique conçue pour les petits commerces. Deelpay est simple, rapide et sécurisé pour payer en magasin et dans des applications web et mobile. Il facilite également les paiements entre particuliers."
+          content="Deelpay est un portefeuille électronique conçue pour les petits commerces. Deelpay est simple, rapide et sécurisé pour payer en magasin et dans des applications web et mobile. Il facilite également les paiements entre particuliers."
         />
-        <meta name="keywords" content="deelpay,portefeuille,porte-monnaie,electronique,mobile,money,envoi,retrait,dépôt,moyen,paiement,simple,rapide,sécurisé,ewallet,commerce,ecommerce,magasin,agence,cash point,business,api,developpeur" />
+        <meta name="keywords" content="deelpay,deelpay.com,portefeuille,porte-monnaie électronique,mobile money,envoi,retrait,dépôt,argent,moyen de paiement,simple,rapide,sécurisé,ewallet,commerce,ecommerce,magasin,agence,cash point,business,api,developpeur,argent" />
         <meta name="author" content="Deelpay" />
       </Head>
       <Layout>
@@ -25,7 +25,7 @@ function Developpeurs() {
                 <Developper height="300px" width="100%" />
               </div>
               <div className="col-md-7 order-md-12">
-                <h1>Deelpay pour les developpeurs</h1>
+                <h1>Deelpay pour les développeurs</h1>
                 <hr color="#21ce99" width="20%" align="left" className="line-dev"/>
                 <p>
                   L’équipe de développeurs deelpay travaille d’arrache-pied pour

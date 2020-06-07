@@ -12,9 +12,9 @@ function Faq() {
         <title>FAQ</title>
         <meta
           name="description"
-          content="Deelpay est un portefeuille electronique conçue pour les petits commerces. Deelpay est simple, rapide et sécurisé pour payer en magasin et dans des applications web et mobile. Il facilite également les paiements entre particuliers."
+          content="Deelpay est un portefeuille électronique conçue pour les petits commerces. Deelpay est simple, rapide et sécurisé pour payer en magasin et dans des applications web et mobile. Il facilite également les paiements entre particuliers."
         />
-        <meta name="keywords" content="deelpay,portefeuille,porte-monnaie,electronique,mobile,money,envoi,retrait,dépôt,moyen,paiement,simple,rapide,sécurisé,ewallet,commerce,ecommerce,magasin,agence,cash point,business,api,developpeur" />
+        <meta name="keywords" content="deelpay,deelpay.com,portefeuille,porte-monnaie electronique,mobile money,envoi,retrait,dépôt,argent,moyen de paiement,simple,rapide,sécurisé,ewallet,commerce,ecommerce,magasin,agence,cash point,business,api,developpeur" />
         <meta name="author" content="Deelpay" />
       </Head>
       <Layout>
@@ -77,7 +77,7 @@ function Faq() {
 
               <QuestionAnswer
                 question="Comment puis-je intégrer deelpay dans mon business?"
-                answer="Pour intégrer deelpay comme moyen de paiement dans votre business il suffit d’avoir un compte deelpay et accepter les conditions d’intégrations. Pour les developpeurs visitez la page developpeurs.  Pour plus de précisions veillez contacter le service deelpay pour le business."
+                answer="Pour intégrer deelpay comme moyen de paiement dans votre business il suffit d’avoir un compte deelpay et accepter les conditions d’intégrations. Pour les développeurs visitez la page développeurs.  Pour plus de précisions veillez contacter le service deelpay pour le business."
               />
             </ListGroup>
           </div>

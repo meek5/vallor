@@ -17,9 +17,9 @@ function Portefeuille() {
         <title>Portefeuille Deelpay</title>
         <meta
           name="description"
-          content="Deelpay est un portefeuille electronique conçue pour les petits commerces. Deelpay est simple, rapide et sécurisé pour payer en magasin et dans des applications web et mobile. Il facilite également les paiements entre particuliers."
+          content="Deelpay est un portefeuille électronique conçue pour les petits commerces. Deelpay est simple, rapide et sécurisé pour payer en magasin et dans des applications web et mobile. Il facilite également les paiements entre particuliers."
         />
-        <meta name="keywords" content="deelpay,portefeuille,porte-monnaie,electronique,mobile,money,envoi,retrait,dépôt,moyen,paiement,simple,rapide,sécurisé,ewallet,commerce,ecommerce,magasin,agence,cash point,business,api,developpeur" />
+        <meta name="keywords" content="deelpay,deelpay.com,portefeuille,porte-monnaie électronique,mobile money,envoi,retrait,dépôt,argent,moyen de paiement,simple,rapide,sécurisé,ewallet,commerce,ecommerce,magasin,agence,cash point,business,api,developpeur" />
         <meta name="author" content="Deelpay" />
       </Head>
       <Layout>

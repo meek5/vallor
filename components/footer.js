@@ -14,7 +14,7 @@ const Footer = () => {
             <h2 className="footer-title">À propos</h2>
             <hr color="#21ce99" align="left" width="20%" />
             <p>
-              Deelpay est une solution porte-monnaie electronique qui facilite
+              Deelpay est une solution porte-monnaie électronique qui facilite
               le payement en magasin et dans des applications partout en RDC.
               Avec deelpay les flux financiers de l'entrepreneur deviennent
               simples et instantanés.
