@@ -77,7 +77,7 @@ function Faq() {
 
               <QuestionAnswer
                 question="Comment puis-je intégrer deelpay dans mon business?"
-                answer="Pour intégrer deelpay comme moyen de paiement dans votre business il suffit d’avoir un compte deelpay et accepter les conditions d’intégrations. Pour les developpeurs visitez la l'onglet developpeurs.  Pour plus de précisions veillez contacter le service deelpay pour le business."
+                answer="Pour intégrer deelpay comme moyen de paiement dans votre business il suffit d’avoir un compte deelpay et accepter les conditions d’intégrations. Pour les developpeurs visitez la page developpeurs.  Pour plus de précisions veillez contacter le service deelpay pour le business."
               />
             </ListGroup>
           </div>
