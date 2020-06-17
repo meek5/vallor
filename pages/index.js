@@ -60,7 +60,7 @@ const sendMessageTodeelpayTeam =()=>{
               <h1 className="home-title">Deelpay </h1>
               <hr color="#21ce99" align="left" width="20%" />
               <p className="home-message">
-                Un portefeuille electronique conçue pour les petits commerces.
+                Un portefeuille électronique conçue pour les petits commerces.
                 Deelpay est simple, rapide et sécurisé pour payer en magasin et
                 dans des applications web et mobile.
               </p>
