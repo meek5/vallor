@@ -591,6 +591,7 @@ export default function Home() {
 
         .section-contact {
           font-family: "Maven Pro";
+          background-color: #fffefa;
         }
         .section-contact h1 {
           font-size: 4rem;
