@@ -1,37 +1,39 @@
 import React from "react";
-import Download from "../icons/download.svg";
+import Link from "next/link";
 
-function DropMenu({ isMobMenu }) {
+function DropMenu({ isMobMenu, toggleMobMenu }) {
   return (
     <div className={`container-dropmenu p-2 ${isMobMenu && "open"}`}>
       <div className="header-dropmenu px-2">
         <h3 className="mb-0">Menu</h3>
       </div>
       <ul className="mt-3">
-        <a href="/">
-          <li className="mb-2">Accueil</li>
-        </a>
-        <a href="/portefeuille">
-          <li className="mb-2">Portefeuille</li>
-        </a>
-        <a href="/developpeurs">
-          <li className="mb-2">Développeurs</li>
-        </a>
-        <a href="/#contact">
-          <li className="mb-2">Contact</li>
-        </a>
-        <a href="/faq">
-          <li className="mb-2">FAQ</li>
-        </a>
+        <Link href="/#agence">
+          <a>
+            <li className="mb-2" onClick={toggleMobMenu}>L'agence</li>
+          </a>
+        </Link>
+        <Link href="/#portfolio">
+          <a>
+            <li className="mb-2" onClick={toggleMobMenu}>Portfolio</li>
+          </a>
+        </Link>
+        <Link href="/#academie">
+          <a>
+            <li className="mb-2" onClick={toggleMobMenu}>L'académie</li>
+          </a>
+        </Link>
+        <Link href="/#contact">
+          <a>
+            <li className="mb-2" onClick={toggleMobMenu}>Contact</li>
+          </a>
+        </Link>
+        <Link href="/#faq">
+          <a>
+            <li className="mb-2" onClick={toggleMobMenu}>FAQ</li>
+          </a>
+        </Link>
       </ul>
-      <div className="text-center py-5 mb-5">
-        <a href="/">
-          <button className="px-5 py-2">
-            <Download height="24px" className="mr-2" />
-            Télécharger
-          </button>
-        </a>
-      </div>
       <style jsx>{`
         .container-dropmenu {
           font-family: "Maven Pro";
@@ -39,11 +41,9 @@ function DropMenu({ isMobMenu }) {
           height: 100vh;
           overflow-y:auto;
           width: 100%;
-          background-color: #fff;
-          z-index: 50;
+          background-color: #FFFEFA;
+          z-index: 999;
           top: 72px;
-          transition: transform 0.6s ease-out;
-          transform: translateX(-100%);
         }
         .container-dropmenu::-webkit-scrollbar-track {
           background-color: #fff;
@@ -58,41 +58,29 @@ function DropMenu({ isMobMenu }) {
           background-color: #21ce99;
         }
 
-        .container-dropmenu.open {
-          transform: translateX(0);
-        }
+       
         h3 {
-          font-weight: bolder;
-          color: #000;
+          font-weight: 500;
+          color: #000000;
         }
         .header-dropmenu {
-          background-color: #f7f8fc;
+          /* background-color: #f7f8fc; */
+          /* background-color: #t; */
           padding-top: 5px;
           padding-bottom: 5px;
+          box-shadow: 0px 0px 10px rgba(0,0,0,0.01)
         }
 
         a {
           color: #4a4a4a;
         }
         a:hover {
-          color: #21ce99;
+          color: #ffcd00;
         }
         ul li {
           font-size: 1.6rem;
         }
-        button {
-          background-color: #21ce99;
-          color: #000;
-          border: none;
-          font-size: 1.4rem;
-          font-weight: bold;
-          border-radius: 25px;
-        }
-        button:hover,
-        button:focus {
-          outline: none;
-          background-color: #00bfa5;
-        }
+       
         @media (min-width: 992px) {
         }
       `}</style>

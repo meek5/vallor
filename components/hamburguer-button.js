@@ -1,13 +1,13 @@
 import React from 'react'
-import Close from "../icons/close.svg"
-
+import Close from "../icons/close1.svg"
+import Menu from "../icons/menu2.svg"
 function Hamburguerbutton({toggleMobMenu, isMobMenu}) {
     return (
         <div className="hamburguer-btn mr-3" onClick={toggleMobMenu}>
-            {!isMobMenu && <div className="btn-bar"/>}
+            {/* {!isMobMenu && <div className="btn-bar"/>}
             {!isMobMenu && <div className="btn-bar "/>}
-            {!isMobMenu && <div className="btn-bar"/>}
-            {isMobMenu && <Close height="48px" width="48px"/>}
+            {!isMobMenu && <div className="btn-bar"/>} */}
+            {isMobMenu ? <Close height="40px" width="48px"/>:<Menu height="40px" width="48px"/>}
             <style jsx>{`
                 .hamburguer-btn{
                     display:flex;

@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 
-import Logo from "../icons/logo.svg";
-import Download from "../icons/download.svg";
+// import Logo from "../icons/logo.svg";
+import Menu from "../icons/menu3.svg";
+import Close from "../icons/close1.svg"
 import { useMediaQuery } from "react-responsive";
 import Hamburguerbutton from "./hamburguer-button";
 import DropMenu from "./dropMenu";
+import Link from "next/link";
+
 
 const Header = () => {
   const isMobileDivice = useMediaQuery({ query: "(max-width:767.9px)" });
@@ -14,15 +17,17 @@ const Header = () => {
   };
 
   return (
-    <header className="py-3">
-      <div className="container-header">
-        <a href="/">
-          <Logo height="32px" width="40px" className="ml-3" />
-        </a>
+    <header className="py-4">
+      <div className="container-fluid container-header">
+        <Link href="/">
+          <a>
+            <img className="" src="/assets/images/vallorlogo.png" height="44px"/>
+          </a>
+        </Link>
         {!isMobileDivice && (
           <nav className="ml-5">
             <ul className="list-menu mb-0 pl-0">
-              <a href="/">
+              {/* <a href="/">
                 <li className="mb-0">Accueil</li>
               </a>
               <a href="/portefeuille">
@@ -36,7 +41,7 @@ const Header = () => {
               </a>
               <a href="/faq">
                 <li>FAQ</li>
-              </a>
+              </a> */}
             </ul>
           </nav>
         )}
@@ -47,22 +52,22 @@ const Header = () => {
             isMobMenu={isMobMenu}
           />
         ) : (
-          <button className="btn-header-download px-4 py-2 mr-3">
-            <Download height="24px" className="mr-2" />
-            Télécharger
+          <button className="btn-header-download" onClick={toggleMobMenu}>
+            {isMobMenu?<Close height="40px" width="48px"/>:<Menu height="40px"  width="48px"  />}
+            {/* Contact */}
           </button>
         )}
       </div>
-      {isMobMenu && isMobileDivice && (
-        <DropMenu isMobMenu={isMobMenu}/>
+      {isMobMenu && (
+        <DropMenu isMobMenu={isMobMenu} toggleMobMenu={toggleMobMenu}/>
       )}
       <style jsx>{`
         header {
           position: fixed;
           width: 100%;
-          box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.05);
-          background-color: #fff;
-          z-index: 100;
+          /* box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.05); */
+          background-color: rgba(255,254,250,0.99);
+          z-index: 1000;
         }
 
         .container-header {
@@ -73,17 +78,17 @@ const Header = () => {
           flex: 1;
         }
         .btn-header-download {
-          background-color: #21ce99;
+          background-color: transparent;
           border: none;
-          font-weight: bold;
+          /* font-weight: 500;
           font-size: 1.2rem;
-          border-radius: 25px;
-          font-family: "Maven Pro";
+          border-radius: 25px; */
+          /* font-family: "Maven Pro"; */
         }
         .btn-header-download:hover,
         .btn-header-download:focus {
           outline: none;
-          color: #fff;
+          /* color: #fff; */
         }
         @media (max-width: 767.9px) {
         }

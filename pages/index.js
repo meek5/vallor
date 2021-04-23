@@ -1,73 +1,51 @@
 import React, { useState } from "react";
 import Head from "next/head";
+import Link from "next/link";
 import Layout from "../components/layout";
 import { Row, Col } from "reactstrap";
-// import Wallet from "../icons/wallet.svg";
-import Target from "../icons/target.svg";
-import Faster from "../icons/faster.svg";
-import Secure from "../icons/secure.svg";
-// import Deelpay from "../icons/deelpay.svg";
-import HomeIllustrator1 from "../public/assets/images/home-illustrator.svg";
-// import Developer from "../public/assets/images/developer.svg";
-// import Donor from "../public/assets/images/donor.svg";
-// import Freelance from "../public/assets/images/freelance.svg";
-// import Shoper from "../public/assets/images/shoper.svg";
-// import Entreprise from "../public/assets/images/entreprise.svg";
-import Smile from "../public/assets/images/smile.svg";
-// import PeerTPeer from "../public/assets/images/peertopeer.svg";
+import Target from "../icons/team.svg";
+import Faster from "../icons/digital.svg";
+import Secure from "../icons/performance.svg";
+import HomeIllustrator1 from "../public/assets/images/home-illustrator3.svg";
 import Email from "../icons/email.svg";
-import Envelope from "../icons/envelope.svg"
 import Telephone from "../icons/telephone.svg";
 import Location from "../icons/location.svg";
-import { useMediaQuery } from "react-responsive";
+import Question from "../components/question-answer";
+import ListGroup from "reactstrap/lib/ListGroup";
 
 export default function Home() {
-  const isMobileDevice = useMediaQuery({ query: "(max-width:767.9px)" });
-  const [isPopUpDownload, setisPopUpDownload] = useState(true);
-  const [isFloatingBtn, setisFloatingBtn] = useState(false);
-  // const togglePopupDownload = () => {
-  //   setisPopUpDownload(false);
-  // };
-
-  const toggleFoatingBtn = () => {
-    setisFloatingBtn(!isFloatingBtn);
-  };
-
-const sendMessageTodeelpayTeam =()=>{
-  toggleFoatingBtn()
-}
 
   return (
     <div className="">
       <Head>
-        <title>Deelpay</title>
+        <title>Vallordev - Votre agence web créative basée en RDC</title>
         <meta
           name="description"
-          content="Deelpay est un portefeuille électronique conçue pour les petits commerces. Deelpay est simple, rapide et sécurisé pour payer en magasin et dans des applications web et mobile. Il facilite également les paiements entre particuliers."
+          content="Vallordev est une agence web digitale basée en RDC spécialisée dans la création des applications mobiles sur mesure, des sites internet et du contenu créative qui captent l’attention et surtout qui génèrent des résultats."
         />
         <meta
           name="keywords"
-          content="deelpay,deelpay.com,portefeuille,porte-monnaie electronique,mobile money,envoi,retrait,dépôt,argent,moyen de paiement,simple,rapide,sécurisé,ewallet,commerce,ecommerce,magasin,agence,cash point,business,api,developpeur"
+          content="vallordev,vallor,vallor.dev,agence digital,créative,Web,Marketing digital"
         />
-        <meta name="author" content="Deelpay" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name="author" content="vallordev" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <Layout>
         {/* Ecran d'acceuil  secrion 1*/}
         <div className="container container-section-home">
           <Row>
             <Col md="6">
-              <h1 className="home-title">Deelpay </h1>
-              <hr color="#21ce99" align="left" width="20%" />
-              <p className="home-message">
-                Un portefeuille électronique conçue pour les petits commerces.
-                Deelpay est simple, rapide et sécurisé pour payer en magasin et
-                dans des applications web et mobile.
-              </p>
+              <h1 className="home-title">
+                L'agence web, créative et innovante
+              </h1>
               <div className="text-left mb-5">
-                <button className="btn-home-download px-5 py-2 font-weight-bold">
-                  Télécharger
-                </button>
+                <Link href="/#contact">
+                  <a>
+                    <button className="btn-home-download mt-3 px-5 font-weight-normal">
+                      Créons ensemble
+                    </button>
+                  </a>
+                </Link>
               </div>
             </Col>
             <Col md="6">
@@ -78,167 +56,297 @@ const sendMessageTodeelpayTeam =()=>{
           </Row>
         </div>
         {/* ecran caracteristique de Deelpay */}
-        <div className="container-features">
+        <div className="about-section py-5" id="agence">
           <div className="container">
-            <Row>
-              <Col md="4">
-                <div className="text-center">
-                  <Target height="100px" width="120px" />
-                  <h3 className="text-white">Simple</h3>
-                  <p className="mb-0">
-                    Simplifier et automatiser votre business, votre vie.
-                  </p>
+            <h1 className="text-left my-5">L'agence</h1>
+            <div className="row">
+              <div className="col-md-8">
+                <p className="about-agency text-left">
+                  Vallordev est une agence web digitale basée en RDC spécialisée
+                  dans la création des applications mobiles sur mesure, des
+                  sites internet et du contenu créative qui captent l’attention
+                  et surtout qui génèrent des résultats.
+                </p>
+                <p className="about-agency text-left">
+                  Une équipe qui fait ce qu’elle sait faire le mieux. Nous
+                  sommes des développeurs et designers engagés autour de la
+                  passion, de l'innovation et de la performance. Nous détectons
+                  rapidement vos besoins et les faisons correspondre avec des
+                  bonnes ressources pour la réussite de votre transformation
+                  digitale.
+                </p>
+                <p className="about-agency">
+                  Pour toute prestation, nous offrons une tarification juste et
+                  des prix compétitifs. Ensemble nous respectons votre budget
+                  sans sacrifier la qualité.
+                </p>
+                <Link href="/#prestations">
+                  <a>
+                    <button className=" px-5 my-5">Nos prestations</button>
+                  </a>
+                </Link>
+              </div>
+              <div className="col-md-4">
+                {/* <h2 className="mb-3">En valeur</h2> */}
+                <div className="value-item mb-4">
+                  <Target height="64px" width="80px" />
+                  <div className="text-content ml-3">
+                    <h3 className="text ">Passion</h3>
+                    <p className="mb-0">
+                      Vallordev, c’est avant tout une équipe soudée autour d'une
+                      mission ponctuée de confiance et de passion.
+                    </p>
+                  </div>
                 </div>
-              </Col>
-              <Col md="4">
-                <div className="text-center">
-                  <Faster height="100px" width="120px" />
-                  <h3 className="text-white">Rapide</h3>
-                  <p className="mb-0">
-                    Accélérer vos payement à une vitesse incroyable.
-                  </p>
+                <div className="value-item mb-4">
+                  <Faster height="60px" width="80px" />
+                  <div className="text-content ml-3">
+                    <h3 className="text-">Innovation</h3>
+                    <p className="mb-0">
+                      Chaque jour est pour nous l'occasion de créer, d'innover,
+                      d'imaginer et de révolutionner des projets.
+                    </p>
+                  </div>
                 </div>
-              </Col>
-              <Col md="4">
-                <div className="text-center">
-                  <Secure height="100px" width="120px" />
-                  <h3 className="text-white">Sécurisé</h3>
-                  <p className="mb-0">
-                    Votre sécurité, notre engagement, votre fidelité.
-                  </p>
+                <div className="value-item mb-4">
+                  <Secure height="60px" width="80px" />
+                  <div className="text-content ml-3">
+                    <h3 className="text-">Performance</h3>
+                    <p className="mb-0">
+                      Nous détectons rapidement vos besoins et les faisons
+                      correspondre avec des bonnes ressources pour votre
+                      réussite.
+                      {/* Nous communiquons avec nos clients de manière transparente
+                      et directe dès le début de chaque projet. */}
+                    </p>
+                  </div>
                 </div>
-              </Col>
-            </Row>
-          </div>
-        </div>
-        {/* Ecran possibilities (Commercant, developpeur, entreprise, freelance, donateur) */}
-        <div className="py-3 section-possibilities">
-          <h1 className="text-center my-5">À chacun sa part</h1>
-          <div className="container">
-            <Row className="py-4">
-              <Col className="text-right" xs="8" sm="6">
-                <h2>Paiement entre particuliers</h2>
-                <hr color="#21ce99" align="right" width="10%" />
-                <p>
-                  Deelpay permet à transférer de l'argent à vos proches sans se
-                  prendre la tête. Deelpay facilite également le paiement entre
-                  particuliers.
-                </p>
-              </Col>
-              <Col className="" xs="4" sm="6">
-                <div className="img-peer-to-peer" />
-              </Col>
-            </Row>
-            <Row className="py-4">
-              <Col className="text-right" xs="4" sm="6">
-                <div className="img-shoper" />
-              </Col>
-              <Col className="" xs="8" sm="6">
-                <h2>Commerçant</h2>
-                <hr color="#21ce99" align="left" width="10%" />
-                <p>
-                  Deelpay permet aux entrepreneurs commerçant de recevoir des
-                  payements en magasin physique ou dépuis des boutiques en
-                  ligne.
-                </p>
-              </Col>
-            </Row>
-            <Row className="py-4">
-              <Col className="text-right" xs="8" sm="6">
-                <h2>Donateur</h2>
-                <hr color="#21ce99" align="right" width="10%" />
-                <p>
-                  Deelpay permet aux personnes de bonne volontée de faire des
-                  dons et contribuer à des projets charitatifs plus facilement.
-                </p>
-              </Col>
-              <Col className="" xs="4" sm="6">
-                <div className="img-donor" />
-              </Col>
-            </Row>
-            <Row className="py-4">
-              <Col className="text-right" xs="4" sm="6">
-                <div className="img-freelance" />
-              </Col>
-              <Col xs="8" sm="6">
-                <h2>Matcheur & Freelance</h2>
-                <hr color="#21ce99" align="left" width="10%" />
-                <p>
-                  Deelpay facilite les freelances et matcheurs à recevoir les
-                  payements de prestation de service en un click.
-                </p>
-              </Col>
-            </Row>
-            <Row className="py-4">
-              <Col className="text-right" xs="8" sm="6">
-                <h2>Entreprise</h2>
-                <hr color="#21ce99" align="right" width="10%" />
-                <p>
-                  Deelpay permet aux entreprises de tout genre à effectuer des
-                  payements et permettre à leurs clients de payer les services
-                  ou produits qu'elles offrent.{" "}
-                </p>
-              </Col>
-              <Col xs="4" sm="6">
-                <div className="img-entreprise" />
-              </Col>
-            </Row>
-            <Row className="py-4">
-              <Col className="text-right" xs="4" sm="6">
-                <div className="img-developer" />
-              </Col>
-              <Col xs="8" sm="6">
-                <h2>Développeur</h2>
-                <hr color="#21ce99" align="left" width="10%" />
-                <p>
-                  Deelpay met à la disposition des développeurs des API faciles
-                  à intégrer dans des applications web et mobile.
-                </p>
-              </Col>
-            </Row>
-          </div>
-        </div>
-        {/* Ecran expert et contact */}
-        <div className="container-business-call py-2">
-          <div className="container div-container-business">
-            <div className="">
-              {!isMobileDevice && <Smile height="280px" width="300px" />}
+              </div>
             </div>
-            <div className="div-text-business">
-              <h3 className="text-left">
-                Votre business,
-                <br />
-                Votre vie,
-                <br />
-                Notre sourire!{" "}
-                {isMobileDevice && <Smile height="48px" width="55px" />}
-              </h3>
-              <p className="mb-0 text-white">
-                Des nouvelles idées de business grâce à DeelPay.
-              </p>
-              <p className="text-white">
-                Télécharger et créer votre deelpay wallet et jouissez d'un
-                service financier adapté à vos besoins du quotidien.
-              </p>
+          </div>
+        </div>
+
+        <div className="container container-services py-5" id="prestations">
+          <div>
+            <h1 className="my-5">
+              N’attendez plus,
+              <br />
+              notre agence web est là pour vous
+            </h1>
+          </div>
+          <div className="row pt-5">
+            <div className="col-md-4 mb-2">
+              <div className="service-card">
+                <img
+                  src="/assets/images/setting.svg"
+                  alt=""
+                  width="92"
+                  height="72px"
+                />
+                <div className="card-content ml-3">
+                  <h4 className="">Création et refonte de site internet</h4>
+                  <p>
+                    Site vitrine ou e-commerce, faites appel à notre agence web
+                    pour la création de votre site internet.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-md-4 mb-2">
+              <div className="service-card">
+                <img
+                  src="/assets/images/designer.svg"
+                  alt=""
+                  width="92"
+                  height="72px"
+                />
+                <div className="card-content ml-3">
+                  <h4 className="">Web Design</h4>
+                  <p>
+                    Le WebDesign (UX & UI Design), l’art de présenter de manière
+                    simple les choses les plus complexes.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-4 mb-2">
+              <div className="service-card">
+                <img
+                  src="/assets/images/coding.svg"
+                  alt=""
+                  width="92"
+                  height="72px"
+                />
+                <div className="card-content ml-3">
+                  <h4 className="">Développement</h4>
+                  <p>
+                    Les besoins spécifiques de développement sont étudiés par
+                    nos équipes. Nous pouvons donc évaluer vos demandes et vous
+                    conseiller au mieux.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-4 mb-2">
+              <div className="service-card">
+                <img
+                  src="/assets/images/vector.svg"
+                  alt=""
+                  width="92"
+                  height="72px"
+                />
+                <div className="card-content ml-3">
+                  <h4 className="">
+                    Création logo, identité visuelle, charte graphique
+                  </h4>
+                  <p>
+                    Démarquez-vous de vos concurrents et soignez votre image de
+                    marque
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-4 mb-2">
+              <div className="service-card">
+                <img
+                  src="/assets/images/digital-marketing.svg"
+                  alt=""
+                  width="92"
+                  height="72px"
+                />
+                <div className="card-content ml-3">
+                  <h4 className="">Marketing digital</h4>
+                  <p>
+                    Rendez vous plus visible ! Augmentez la notoriété de votre
+                    marque avec le web marketing.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-4 mb-2">
+              <div className="service-card mb-5">
+                <img
+                  src="/assets/images/online-learning.svg"
+                  alt=""
+                  width="92"
+                  height="72px"
+                />
+                <div className="card-content ml-3">
+                  <h4 className="">Formation</h4>
+                  <p>
+                    Du développement web/mobile pour tous les profils qui
+                    démontrent une forte motivation à apprendre, désapprendre et
+                    réapprendre.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Ecran expert et contact */}
+        <div className="portfolio-section py-5" id="portfolio">
+          <div className="container my-5">
+          <h1 className="text-center mb-0">Portfolio</h1>
+          {/* Notre réussite passe par la vôtre! */}
+            <p className="text-center mb-5">Dernières réalisations </p>
+            <div className="row">
+              <div className="col-md-6">
+              <img src="/assets/images/bisimbi.jpg" width="100%" className="mb-2"/>
+              <h5 className="text-center text-white my-3">bisimbi</h5>
+              </div>
+              <div className="col-md-6">
+                <img src="/assets/images/tayarifood.jpg" width="100%" className="mb-2"/>
+                <h5 className="text-center text-white my-3">Tayarifood</h5>
+              </div>
+              <div className="col-md-6">
+              <img src="/assets/images/vyengi.jpg" width="100%" className="mb-2"/>
+              <h5 className="text-center text-white my-3">Vyengi</h5>
+              </div>
+              <div className="col-md-6">
+              <img src="/assets/images/vallordev.jpg" width="100%" className="mb-2"/>
+              <h5 className="text-center text-white my-3">Vallordev</h5>
+              <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="faq-section py-5" id="faq">
+          <div className="container">
+            <h1 className="text-left my-5 ">Faq</h1>
+            <div className="row">
+              <div className="col-md-12">
+                <ListGroup>
+                  <Question
+                    question="Pourquoi faire appel à notre agence web?"
+                    answer="Vous souhaitez lancer votre site web ou une application ? Notre agence peut vous accompagner dans votre projet.
+              Nous utilisons tous les outils disponibles pour offrir des solutions de qualité à nos clients.
+              À l’écoute de vos attentes, nous mettrons tout en œuvre pour effectuer un suivi de votre projet et lui offrir une optimisation fiable à long terme."
+                  />
+                  <Question
+                    question="Combien de temps prend la réalisation d'un projet?"
+                    answer="Délais courts pour les tâches simples, échéanciers plus longs pour les plus gros projets."
+                  />
+                  <Question
+                    question="Quels sont nos tarifs horaires?"
+                    answer="Nous offrons une tarification juste et des prix compétitifs. Ensemble nous respectons votre budget sans sacrifier la qualité."
+                  />
+                  <Question
+                    question="Avez-vous une question concernant notre agence?"
+                    answer="Pour toute question, veuillez nous écrire depuis la section nos contacts ci-dessous. Notre équipe n'hésitera pas à vous répondre."
+                  />
+                </ListGroup>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="academy-section py-5" id="academie">
+          <div className="container my-5">
+          <h1 className="text-center mb-0">L'académie</h1>
+            <p className="text-center mb-2">Apprendre, Désapprendre et
+                    Réapprendre</p>
+            <div className="row mt-5">
+              <div className="col-md-6">
+                <img src="/assets/images/img-team.jpg" width="100%" className="mb-4"/>
+              </div>
+              <div className="col-md-6">
+              <p>
+                  L’équipe Vallordev travaille d’arrache-pied pour
+                  mettre au point une académie, un lieu pour apprendre, désapprendre et réapprendre.
+                  Du développement web/mobile, du UX/UI, du marketing digital pour tous les profils qui démontrent une forte motivation
+                  à atteindre l'excellence pour une ouverture à des nouvelles portes d'opportunités. Restez
+                  connecter, nous vous informerons de l'ouverture
+                  de la plateforme vallordev academy qui sera bientôt disponible sur <a href="https://academy.vallor.dev/" target="_blank">academy.vallor.dev</a>
+                </p>
+                <div className="text-left my-5">
+                <Link href="https://academy.vallor.dev/">
+                  <a target="_blank">
+                    <button className="btn-home-download mt-3 px-5 font-weight-normal">
+                      Formations
+                    </button>
+                  </a>
+                </Link>
+              </div>
+              </div>
             </div>
           </div>
         </div>
         <div className="section-contact py-5" id="contact">
           <div className="container">
+            <h1 className="mt-5 mb-4">Contacts</h1>
             <Row>
-              <Col md="6">
-                <h3>Nos contacts</h3>
-                <hr color="#21ce99" align="left" width="10%" />
-                <div className="item-contact py-3">
+              <Col md="12">
+                <div className="item-contact pb-3 pt-2">
                   <p className="mb-0">
                     <Email height="18px" width="18px" className="mr-2" />
-                    contact@deelpay.com
+                    contact@vallor.dev
                   </p>
                 </div>
                 <div className="item-contact py-3">
                   <p className="mb-0">
                     <Telephone height="18px" width="18px" className="mr-2" />
-                    +243825342047
+                    +243978308679
                   </p>
                 </div>
                 <div className="item-contact py-3">
@@ -248,95 +356,21 @@ const sendMessageTodeelpayTeam =()=>{
                     3e niveau
                   </p>
                 </div>
-                <div className="my-5">
-                  <h2 className="text-center">Nos experts vous répondent</h2>
-                  {/* <hr color="#21ce99" align="left" width="10%" /> */}
-                  <p className="text-center">
+                <div className="pb-5 mt-4">
+                  <p className="mb-5">
                     Notre équipe est à votre disposition pour répondre à vos
-                    questions concernant Deelpay.
+                    questions et préoccupations.
                   </p>
-                </div>
-              </Col>
-              <Col md="6">
-                <div className="col-contact-deelpay">
-                  <h3>Laisses-nous un message</h3>
-                  <hr color="#21ce99" align="left" width="10%" />
-                  <form className="form-contact">
-                    <div className="div-input-c mb-3">
-                      <label className="font-weight-bold mb-0 p-2">Nom</label>
-                      <input type="text" name="name" className="p-2" />
-                    </div>
-                    <div className="div-input-c">
-                      <label className="font-weight-bold mb-0 p-2">Email</label>
-                      <input type="email" name="name" className="p-2" />
-                    </div>
-                    <div className="div-textarea my-3">
-                      <label className="font-weight-bold mb-0 p-2">
-                        Votre message
-                      </label>
-                      <textarea name="name" rows="6" className="p-2" />
-                    </div>
-                    <div className="text-right">
-                      <button className="px-5 py-2">Envoyer</button>
-                    </div>
-                  </form>
                 </div>
               </Col>
             </Row>
           </div>
         </div>
-        <div className="message-float-btn-container">
-          {isFloatingBtn ? (
-            <form onSubmit={sendMessageTodeelpayTeam} className="form-message-floating-btn">
-              <div className="form-message-header mb-0 px-1 py-2">
-                <h4>✍️ Laisses nous un message</h4>
-                <button onClick={toggleFoatingBtn} className="ml-3">X</button>
-              </div>
-              <div className="p-3">
-              <div className="div-input-message">
-                <label >*Votre email</label>
-                <input type="email" className="p-2" required/>
-              </div>
-              <div className="div-input-message mb-3">
-                <label>*Votre message</label>
-                <textarea className="p-2" required></textarea>
-              </div>
-              <div className="text-right">
-                <button type="submit" className="btn-send-message px-4 py-2">Envoyer</button>
-              </div>
-              </div>
-            </form>
-          ) : (
-            <div className="btn-message" onClick={toggleFoatingBtn}>
-              <Envelope width="48px" height="32px" />
-            </div>
-          )}
-        </div>
-        {/* {isMobileDevice && isPopUpDownload && (
-          <div className="container-download-popup p-3">
-            {/* <div className="div-icon"></div> */}
-        {/* <a href="/">
-              <div>
-                <Deelpay height="48px" width="48px" />
-              </div>
-            </a>
-            <a href="/" className="div-download-text">
-              <div className=" ml-2">
-                <h6 className="mb-0">Deelpay</h6>
-                <p className="mb-0">Télécharger sur playstore</p>
-              </div>
-            </a>
-
-            <div>
-              <button onClick={togglePopupDownload}>x</button>
-            </div>
-          </div> */}
-        {/* )}  */}
       </Layout>
       <style jsx>{`
         .container-section-home {
           font-family: "Maven Pro";
-          height: 600px;
+          height: 700px;
           display: flex;
           align-items: center;
           padding-top: 150px;
@@ -348,35 +382,92 @@ const sendMessageTodeelpayTeam =()=>{
           font-size: 5rem;
         }
         .home-message {
-          font-size: 1.4rem;
+          font-weight: 500;
+          font-size: 1.6rem;
+          line-height: 40px;
         }
         .btn-home-download {
-          border: 2px solid #21ce99;
-          background-color: #fff;
-          color: #21ce99;
-          box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.15);
-          border-radius: 25px;
+          border: none;
+          background: rgb(255,156,7);
+          background: linear-gradient(100deg, rgba(255,156,7,0.9976365546218487) 20%, rgba(255,205,0,1) 100%);
+          color:#FFFEFA;
+          padding-top:15px;
+          padding-bottom:15px;
           font-size: 1.2rem;
-          font-weight: bold;
+          font-weight: 100;
+          border-radius:30px;
         }
         .btn-home-download:hover,
         .btn-home-download:focus {
-          border: 2px solid #00bfa5;
-          box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
-          color: #00bfa5;
+          box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05);
+          color: #FFFFFF;
           outline: none;
         }
 
-        .container-features {
-          background-color: #21ce99;
+        .about-section {
+          background: rgb(255,156,7);
+          background: linear-gradient(72deg, rgba(255,156,7,1) 50%, rgba(255,205,0,1) 100%);
           font-family: "Maven Pro";
-          padding-top: 30px;
-          padding-bottom: 30px;
+         
         }
-        .container-features h3 {
-          font-size: 2.4rem;
+        .about-section h1 {
+          font-size: 4rem;
         }
-        .container-features p {
+        .about-section h3 {
+          font-size: 1.5rem;
+          font-weight: bold;
+        }
+        .about-section p {
+          /* font-size: 1.2rem; */
+        }
+        .about-section .value-item {
+          display: flex;
+        }
+        .about-section .text-content {
+          flex: 1;
+        }
+        .container-about-agency {
+          font-family: "Maven Pro";
+          /* background-color: #ffcd00; */
+         
+        }
+        .container-about-agency h1 {
+          font-size: 4rem;
+        }
+        .about-agency {
+          font-size: 1.3rem;
+        }
+        .about-section button {
+          background: rgb(14,32,26);
+          background: linear-gradient(90deg, rgba(14,32,26,1) 20%, rgba(60,49,4,1) 100%);
+          border: none;
+          font-weight: 600;
+          padding-top:15px;
+          padding-bottom:15px;
+          color: #fff;
+          border-radius:30px;
+        }
+        .about-section button:hover,
+        .about-section button:focus {
+          outline: none;
+        }
+        .container-services {
+          font-family: "Maven Pro";
+        }
+        .container-services h1 {
+          font-size: 4rem;
+          font-weight: bolder;
+        }
+        .container-services h4 {
+          font-weight: bold;
+        }
+        .service-card {
+          display: flex;
+        }
+        .service-card .card-content {
+          flex: 1;
+        }
+        .service-card .card-content p {
           font-size: 1.2rem;
         }
         .section-possibilities {
@@ -386,7 +477,8 @@ const sendMessageTodeelpayTeam =()=>{
           font-size: 4rem;
         }
         .section-possibilities h2 {
-          color: #21ce99;
+          color: #ffcd00;
+          font-weight: 500;
         }
         .section-possibilities p {
           font-size: 1.2rem;
@@ -446,31 +538,60 @@ const sendMessageTodeelpayTeam =()=>{
           background-position: right;
         }
 
-        .container-business-call {
-          background-color: #000;
+        .portfolio-section {
+          background-color: #2B89A5;
           font-family: "Maven Pro";
         }
-        .div-container-business {
-          display: flex;
-          align-items: center;
+        .portfolio-section h1 {
+          font-size: 4rem;
+          color: #fff;
         }
-        .div-text-business {
-          flex: 1;
+        .portfolio-section p {
+          color: #fff;
+          font-size:1.2rem;
         }
-        .div-container-business h3 {
-          color: #21ce99;
-          font-size: 2rem;
-          font-weight: bolder;
+        .portfolio-section img{
+          border-radius:30px;
         }
-        .div-container-business p {
-          font-size: 1.2rem;
+        .portfolio-section h5{
+          font-size:1.8rem;
         }
+
+        .faq-section {
+          font-family: "Maven Pro";
+          background-color: #fffefa;
+          /* FCF6DC */
+          /* f4f3e9 */
+        }
+        .faq-section h1 {
+          font-size: 4rem;
+        }
+
+        .academy-section {
+          background-color: #0E201A;
+          font-family: "Maven Pro";
+        }
+        .academy-section h1 {
+          font-size: 4rem;
+          color: #fff;
+        }
+        .academy-section p {
+          color: #fff;
+          font-size:1.2rem;
+        }
+        .academy-section a{
+          color:#ffcd00;
+        }
+        .academy-section img{
+          border-radius:30px
+        }
+
+
         .section-contact {
           font-family: "Maven Pro";
         }
-        .section-contact h3 {
-          color: #21ce99;
-          font-size: 2rem;
+        .section-contact h1 {
+          font-size: 4rem;
         }
         .section-contact p {
           font-size: 1.2rem;
@@ -541,8 +662,8 @@ const sendMessageTodeelpayTeam =()=>{
           position: fixed;
           bottom: 10px;
           right: 10px;
-          z-index:200;
-          margin-left:10px;
+          z-index: 200;
+          margin-left: 10px;
         }
 
         .btn-message {
@@ -563,97 +684,63 @@ const sendMessageTodeelpayTeam =()=>{
 
         .form-message-floating-btn {
           background-color: #21ce99;
-          border-radius:10px;
-          box-shadow:2px 2px 2px 1px rgba(255,255,255,1);
+          border-radius: 10px;
+          box-shadow: 2px 2px 2px 1px rgba(255, 255, 255, 1);
         }
 
-        .form-message-header{
-          display:flex;
-          align-items:center;
-          border-bottom:2px solid #3d3d3d;
+        .form-message-header {
+          display: flex;
+          align-items: center;
+          border-bottom: 2px solid #3d3d3d;
         }
-        .form-message-header h4{
-          flex:1;
+        .form-message-header h4 {
+          flex: 1;
         }
-        .form-message-header button{
-          border:none;
-          background-color:transparent;
-          height:22px;
-          width:22px;
-          border-radius:50%;
+        .form-message-header button {
+          border: none;
+          background-color: transparent;
+          height: 22px;
+          width: 22px;
+          border-radius: 50%;
         }
 
         .form-message-header button:hover,
-        .form-message-header button:focus{
-          outline:none;
-          background-color:#fff;
+        .form-message-header button:focus {
+          outline: none;
+          background-color: #fff;
         }
-        .form-message-floating-btn .btn-send-message{
+        .form-message-floating-btn .btn-send-message {
           border: none;
           background-color: #3d3d3d;
           font-weight: bold;
           color: #fff;
           border-radius: 5px;
-
         }
         .form-message-floating-btn .btn-send-message:hover,
-        .form-message-floating-btn .btn-send-message:focus{
-          background-color:#000;
+        .form-message-floating-btn .btn-send-message:focus {
+          background-color: #000;
         }
 
-        .form-message-floating-btn .div-input-message{
-          display:flex;
-          flex-direction:column;
-        }
-       .div-input-message label{
-         color:#3d3d3d;
-         font-weight:bold;
-       }
-       .div-input-message input,
-       .div-input-message textarea{
-        border-radius:5px;
-        border:none;
-        border-bottom:2px solid #fff
-       }
-       .div-input-message input:focus,
-       .div-input-message textarea:focus{
-         outline:none;
-         border-bottom:2px solid #3d3d3d;
-         color:#3d3d3d;
-       }
-        /* .container-download-popup {
-          position: fixed;
+        .form-message-floating-btn .div-input-message {
           display: flex;
-          align-items: center;
-          background-color: #000;
-          bottom: 0;
-          width: 100%;
-          z-index: 30;
+          flex-direction: column;
         }
-        .container-download-popup .div-icon {
-          height: 48px;
-          width: 48px;
-          background-color: #21ce99;
+        .div-input-message label {
+          color: #3d3d3d;
+          font-weight: bold;
+        }
+        .div-input-message input,
+        .div-input-message textarea {
           border-radius: 5px;
-        }
-        .container-download-popup button {
-          background-color: #fff;
           border: none;
+          border-bottom: 2px solid #fff;
         }
-        .container-download-popup button:hover,
-        .container-download-popup button:focus {
+        .div-input-message input:focus,
+        .div-input-message textarea:focus {
           outline: none;
+          border-bottom: 2px solid #3d3d3d;
+          color: #3d3d3d;
         }
-        .div-download-text {
-          flex: 1;
-        }
-        .div-download-text h6 {
-          color: #fff;
-          font-size: 1.4rem;
-        }
-        .div-download-text p {
-          color: rgba(255,255,255,0.5);
-        } */
 
         @media (max-width: 767.9px) {
           .container-section-home {
@@ -662,9 +749,13 @@ const sendMessageTodeelpayTeam =()=>{
           .div-illustrator {
             margin-bottom: -170px;
           }
-          .container-features {
+          .about-section {
             padding-top: 180px;
             padding-bottom: 30px;
+          }
+          .container-services h1 {
+            font-size: 2rem;
+            font-weight: bolder;
           }
 
           @media (max-width: 567.9px) {
@@ -674,7 +765,7 @@ const sendMessageTodeelpayTeam =()=>{
             .div-illustrator {
               margin-bottom: -200px;
             }
-            .container-features {
+            .about-section {
               padding-top: 150px;
             }
             .wallet-icon {

@@ -1,57 +1,58 @@
 import React from "react";
 import Twitter from "../icons/twitter.svg";
-import Instagram from "../icons/instagram.svg";
-import Facebook from "../icons/facebook.svg";
-import Linkedin from "../icons/linkedin.svg";
+import Instagram from "../icons/instagram2.svg";
+import Facebook from "../icons/facebook-logo.svg";
+import Linkedin from "../icons/linkedin2.svg";
 
 const Footer = () => {
 
   return (
     <footer className="footer">
-      <div className="container py-5">
-        <div className="row">
+      <div className="container footer-content py-5">
+        <div className="row mt-5">
           <div className="col-md-4">
-            <h2 className="footer-title">À propos</h2>
-            <hr color="#21ce99" align="left" width="20%" />
+            <h2 className="footer-title mb-4">Pour qui?</h2>
+            {/* <hr color="#ffcd00" align="left" width="20%" /> */}
             <p>
-              Deelpay est une solution porte-monnaie électronique qui facilite
-              le payement en magasin et dans des applications partout en RDC.
-              Avec deelpay les flux financiers de l'entrepreneur deviennent
-              simples et instantanés.
+            TPE, PME, Association, Startup, Digital Entrepreneur ... nous apportons toujours des solutions repondant à votre besoin pour une transformation digitale bien organisée. Votre budget est limité ? Vallordev peut vous aider!
             </p>
           </div>
           <div className="col-md-4">
-            <h6 className="footer-title">Développeurs</h6>
-            <hr color="#21ce99" align="left" width="20%" />
-            <ul className="list-about">
-              <a href="/developpeurs">
-                <li>API & Documentation</li>
-              </a>
-              <a href="/developpeurs">
-                <li>Intégrer deelpay</li>
-              </a>
-              <a href="/">
-                <li>Communauté & Meetup</li>
-              </a>
-              {/* <a href="/">
-                <li>Emplois & Freelance</li>
-              </a> */}
-              <a href="/">
-                <li>Blog</li>
-              </a>
-              <a href="/#contact">
-                <li>Service clients</li>
-              </a>
+            <h6 className="footer-title mb-4">Secteurs</h6>
+            {/* <hr color="#ffcd00" align="left" width="20%" /> */}
+            <div className="row">
+              <div className="col">
+              <ul className="list-about">
+                <li>Communication</li>
+                <li>E-commerce</li>
+                <li>Finance</li>
+                <li>Divertissement</li>
+                <li>Construction</li>
+                {/* <li>Education</li>
+                <li>Santé et Environnement</li>
+                <li>Transport</li> */}
+                {/* <li>Et autres</li> */}
             </ul>
+              </div>
+              <div className="col">
+              <ul className="list-about">
+                {/* <li>Communication</li>
+                <li>E-commerce</li>
+                <li>Finance</li>
+                <li>Divertissement</li> */}
+                <li>Education</li>
+                <li>Santé</li>
+                <li>Transport</li>
+                <li>Industrie</li>
+                <li>Hôtellerie</li>
+            </ul>
+              </div>
+            
+            </div>
           </div>
           <div className="col-md-4">
-            <h6 className="footer-title">Restons connectés</h6>
-            <hr color="#21ce99" align="left" width="20%" />
-            <p>Inscrivez vous au newsletter</p>
-            <form className="mb-4">
-              <div className="div-input"><input type="email" placeholder="Votre email" className="p-3 font-weight-bold" /></div>
-              <button className="font-weight-bold px-3">S'inscrire</button>
-            </form>
+            <h6 className="footer-title mb-4">Restons connectés</h6>
+            {/* <hr color="#ffcd00" align="left" width="20%" /> */}
             <ul className="list-social-icon pl-0">
               <a href="/">
                 <li className="mr-2">
@@ -74,67 +75,99 @@ const Footer = () => {
                 </li>
               </a>
             </ul>
+            <p>Inscrivez vous au newsletter</p>
+            <form className="mb-4">
+              <div className="div-input"><input type="email" placeholder="Votre email" className="p-3 font-weight-bold" /></div>
+              <button className="font-weight-bold px-3">S'inscrire</button>
+            </form>
+            
           </div>
         </div>
       </div>
-      <div className="copyright py-1 ">
-        <div className="container">
-          <p className="content text-center mb-0">
+      <div className="copyright">
+        <div className="container pb-5">
+          <p className="content  py-2 mb-0">
             <a href="/">
-              <span>Mentions Légales</span>
-            </a>{" "}
-            -{" "}
+              <span>Mentions légales</span>
+            </a>
+            <br/>
+            {/* -{" "}
             <a href="/">
               <span>Politique de confidentialité</span>
             </a>
-            <br />© deelpay 2020 Tous droits réservés.
+            <br />  */}
+            © vallordev {new Date().getFullYear()}. Tous droits réservés.
           </p>
         </div>
       </div>
 
       <style jsx>{`
         .footer {
-          background-color: #000;
+          background-color: #111111;
+          
+        }
+        .footer .footer-content{
+          /* border-top: 2px solid #ffcd00; */
         }
         .footer-title {
           font-family: "Maven Pro";
           font-size: 1.4rem;
           font-weight: bolder;
-          color: #21ce99;
+          color: #FFFEFA;
         }
         .footer form{
             display:flex;
             justify-content:space-between;
-            font-family:"Maven Pro"
+            font-family:"Maven Pro";
+            box-shadow:0px 0px 10px rgba(0,0,0,0.02);
+            border-radius:30px;
         }
         form button{
             border: none;
+            color:#FFFEFA;
+            background: rgb(255,156,7);
+          background: linear-gradient(100deg, rgba(255,156,7,0.9976365546218487) 20%, rgba(255,205,0,1) 100%);
+            border-radius:0px 30px 30px 0px;
         }
         form button:focus{
-            outline:1px solid #21ce99;
+            outline:none;
         }
         .div-input{
             flex:1;
+            border-radius:30px 0px 0px 30px;
         }
         .div-input input{
             width:100%;
-            border:none
+            border:none;
+            border-radius:30px 0px 0px 30px;
         }
         .div-input input:focus{
-            outline: 2px solid #21ce99
+            outline:none;
         }
         .list-about {
           font-size: 1.2rem;
         }
-        p {
-          color: #fff;
+        ul{
+          list-style:none;
+          padding:0px;
+        }
+        li{
+          color: #FFFEFA;
           font-family: "Maven Pro";
-          font-weight: 400;
+          font-weight: 500;
           font-size: 16px;
+          line-height:28px;
+        }
+        p {
+          color: #FFFEFA;
+          font-family: "Maven Pro";
+          font-weight: 500;
+          font-size: 1rem;
+          line-height:28px;
         }
 
         a {
-          color: #fff;
+          color: #000;
           font-family: "Maven Pro";
           font-weight: 400;
           font-size: 16px;
@@ -145,15 +178,15 @@ const Footer = () => {
         }
 
         .copyright {
-          background-color: #262626;
+          /* background-color: #000000; */
         }
         .copyright .content {
           font-family: "Maven Pro";
-          font-size: 0.7rem;
-          color: rgba(255, 255, 255, 0.5);
+          font-size: 0.8rem;
+          color: rgba(255,255,255,0.5);
         }
         .content a {
-          color: #21ce99;
+          color: #ffcd00;
         }
       `}</style>
     </footer>
