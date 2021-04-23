@@ -19,7 +19,7 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          <style global jsx>{`
+          <style jsx global>{`
             @font-face {
               font-family: "Maven Pro";
               src: local("Maven Pro"), local(MavenPro),

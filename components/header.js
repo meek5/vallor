@@ -26,8 +26,8 @@ const Header = () => {
         </Link>
         {!isMobileDivice && (
           <nav className="ml-5">
-            <ul className="list-menu mb-0 pl-0">
-              {/* <a href="/">
+            {/* <ul className="list-menu mb-0 pl-0">
+              <a href="/">
                 <li className="mb-0">Accueil</li>
               </a>
               <a href="/portefeuille">
@@ -41,8 +41,8 @@ const Header = () => {
               </a>
               <a href="/faq">
                 <li>FAQ</li>
-              </a> */}
-            </ul>
+              </a>
+            </ul> */}
           </nav>
         )}
         <div className="empty-space" />
@@ -54,7 +54,6 @@ const Header = () => {
         ) : (
           <button className="btn-header-download" onClick={toggleMobMenu}>
             {isMobMenu?<Close height="40px" width="48px"/>:<Menu height="40px"  width="48px"  />}
-            {/* Contact */}
           </button>
         )}
       </div>
@@ -65,7 +64,6 @@ const Header = () => {
         header {
           position: fixed;
           width: 100%;
-          /* box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.05); */
           background-color: rgba(255,254,250,0.99);
           z-index: 1000;
         }

@@ -308,7 +308,7 @@ export default function Home() {
                     Réapprendre</p>
             <div className="row mt-5">
               <div className="col-md-6">
-                <img src="/assets/images/img-team.jpg" width="100%" className="mb-4"/>
+                <img src="/assets/images/students.jpg" width="100%" className="mb-4"/>
               </div>
               <div className="col-md-6">
               <p>
@@ -375,6 +375,7 @@ export default function Home() {
           align-items: center;
           padding-top: 150px;
           padding-bottom: 50px;
+          background-color:#FFFEFA;
         }
         .home-title {
           font-weight: bolder;
