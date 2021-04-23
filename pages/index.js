@@ -454,6 +454,7 @@ export default function Home() {
         }
         .container-services {
           font-family: "Maven Pro";
+          background-color:#FFFEFA;
         }
         .container-services h1 {
           font-size: 4rem;
