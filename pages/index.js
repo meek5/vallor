@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <div className="">
       <Head>
-        <title>Vallordev - Votre agence web créative basée en RDC</title>
+        <title>Vallordev - Votre agence web créative et innovante basée en RDC</title>
         <meta
           name="description"
           content="Vallordev est une agence web digitale basée en RDC spécialisée dans la création des applications mobiles sur mesure, des sites internet et du contenu créative qui captent l’attention et surtout qui génèrent des résultats."
@@ -254,7 +254,7 @@ export default function Home() {
             <div className="row">
               <div className="col-md-6">
               <img src="/assets/images/bisimbi.jpg" width="100%" className="mb-2"/>
-              <h5 className="text-center text-white my-3">bisimbi</h5>
+              <h5 className="text-center text-white my-3">Bisimbi</h5>
               </div>
               <div className="col-md-6">
                 <img src="/assets/images/tayarifood.jpg" width="100%" className="mb-2"/>
