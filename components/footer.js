@@ -3,6 +3,7 @@ import Twitter from "../icons/twitter.svg";
 import Instagram from "../icons/instagram2.svg";
 import Facebook from "../icons/facebook-logo.svg";
 import Linkedin from "../icons/linkedin2.svg";
+import Link from "next/link";
 
 const Footer = () => {
 
@@ -87,9 +88,11 @@ const Footer = () => {
       <div className="copyright">
         <div className="container pb-5">
           <p className="content  py-2 mb-0">
-            <a href="/">
+            <Link href="/">
+            <a>
               <span>Mentions légales</span>
             </a>
+            </Link>
             <br/>
             {/* -{" "}
             <a href="/">
