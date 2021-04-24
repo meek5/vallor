@@ -11,8 +11,10 @@ const Layout = (props) => {
         <Footer/>
       </div>
       <style global jsx>{`
-      body {
+      html{
         scroll-behavior: smooth;
+      }
+      body {
         background-color: #FFFEFA;
       }
       
