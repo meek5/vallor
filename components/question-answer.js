@@ -9,7 +9,7 @@ function QuestionAnswer({ question, answer }) {
     setshowAnswer(!showAnswer);
   };
   return (
-    <ListGroupItem className="qa-item py-5 px-5 mb-3">
+    <ListGroupItem className="qa-item py-5 px-5 mb-4">
       <div onClick={toggleAnswer} className="qa-item-header">
         <h5 className="mb-0" className="question-text">
           {/* <span>&rarr; </span> */}
@@ -27,7 +27,7 @@ function QuestionAnswer({ question, answer }) {
             background-color: #ffffff;
             font-family: "Maven Pro";
             border:none;
-             box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.01);
+             box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.02);
              border-radius:30px;
           }
           .qa-item-header {
